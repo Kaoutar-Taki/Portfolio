@@ -1146,6 +1146,7 @@ img {
 
   .nav__menu {
     margin-left: auto;
+    padding-block: 0;
   }
 
   .change-theme {
