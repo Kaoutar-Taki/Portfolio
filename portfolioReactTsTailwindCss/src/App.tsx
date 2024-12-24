@@ -13,6 +13,7 @@ import testimonial3 from "./img/testimonial3.jpg";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import Header from "./components/Header";
+import ScrollTop from "./components/ScrollTop";
 
 function App() {
   return (
@@ -880,10 +881,7 @@ function App() {
         </div>
       </footer>
 
-      {/* <!--==================== SCROLL TOP ====================--> */}
-      <a href="#" className="scrollup" id="scroll-up">
-        <i className="uil uil-arrow-up scrollup__icon"></i>
-      </a>
+      <ScrollTop />
     </>
   );
 }
