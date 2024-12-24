@@ -10,6 +10,13 @@ import testimonial1 from "./img/testimonial1.jpg";
 import testimonial2 from "./img/testimonial2.jpg";
 import testimonial3 from "./img/testimonial3.jpg";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+// import { Navigation, Pagination } from "swiper";
+// import "swiper/css";
+// import "swiper/css/navigation";
+// import "swiper/css/pagination";
+
 function App() {
   return (
     <>
@@ -576,63 +583,98 @@ function App() {
         <section className="portfolio section" id="portfolio">
           <h2 className="section__title">Portfolio</h2>
           <span className="section__subtitle">Most recent work</span>
+
           <div className="portfolio__container container swiper-container">
-            <div className="swiper-wrapper">
-              {/* <!--==================== PORTFOLIO 1 ====================--> */}
-              <div className="portfolio__content grid swiper-slide">
-                <img src={portfolio1} alt="" className="portfolio__img" />
-                <div className="portfolio__data">
-                  <h3 className="portfolio__title">Modern Website</h3>
-                  <p className="portfolio__description">
-                    A modern and responsive website designed to showcase my
-                    skills.
-                  </p>
-                  <a
-                    href="#"
-                    className="button button--flex button--small portfolio__button"
-                  >
-                    Demo
-                    <i className="uil uil-arrow-right button__icon"></i>
-                  </a>
+            <Swiper
+              className="swiper-wrapper"
+              modules={[Navigation, Pagination]}
+              spaceBetween={30}
+              slidesPerView={1}
+              navigation={{
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+              }}
+              pagination={{
+                clickable: true,
+                el: ".swiper-pagination",
+              }}
+            >
+              {/* Portfolio 1 */}
+              <SwiperSlide>
+                <div className="portfolio__content grid swiper-slide">
+                  <img
+                    src={portfolio1}
+                    alt="Modern Website"
+                    className="portfolio__img"
+                  />
+                  <div className="portfolio__data">
+                    <h3 className="portfolio__title">Modern Website</h3>
+                    <p className="portfolio__description">
+                      A modern and responsive website designed to showcase my
+                      skills.
+                    </p>
+                    <a
+                      href="#"
+                      className="button button--flex button--small portfolio__button"
+                    >
+                      Demo
+                      <i className="uil uil-arrow-right button__icon"></i>
+                    </a>
+                  </div>
                 </div>
-              </div>
-              {/* <!--==================== PORTFOLIO 2 ====================--> */}
-              <div className="portfolio__content grid swiper-slide">
-                <img src={portfolio2} alt="" className="portfolio__img" />
-                <div className="portfolio__data">
-                  <h3 className="portfolio__title">Brand Design</h3>
-                  <p className="portfolio__description">
-                    A brand design project that showcases my branding skills.
-                  </p>
-                  <a
-                    href="#"
-                    className="button button--flex button--small portfolio__button"
-                  >
-                    Demo
-                    <i className="uil uil-arrow-right button__icon"></i>
-                  </a>
+              </SwiperSlide>
+
+              {/* Portfolio 2 */}
+              <SwiperSlide>
+                <div className="portfolio__content grid swiper-slide">
+                  <img
+                    src={portfolio2}
+                    alt="Brand Design"
+                    className="portfolio__img"
+                  />
+                  <div className="portfolio__data">
+                    <h3 className="portfolio__title">Brand Design</h3>
+                    <p className="portfolio__description">
+                      A brand design project that showcases my branding skills.
+                    </p>
+                    <a
+                      href="#"
+                      className="button button--flex button--small portfolio__button"
+                    >
+                      Demo
+                      <i className="uil uil-arrow-right button__icon"></i>
+                    </a>
+                  </div>
                 </div>
-              </div>
-              {/* <!--==================== PORTFOLIO 3 ====================--> */}
-              <div className="portfolio__content grid swiper-slide">
-                <img src={portfolio3} alt="" className="portfolio__img" />
-                <div className="portfolio__data">
-                  <h3 className="portfolio__title">Online Store</h3>
-                  <p className="portfolio__description">
-                    An online store project that demonstrates my e-commerce
-                    skills.
-                  </p>
-                  <a
-                    href="#"
-                    className="button button--flex button--small portfolio__button"
-                  >
-                    Demo
-                    <i className="uil uil-arrow-right button__icon"></i>
-                  </a>
+              </SwiperSlide>
+
+              {/* Portfolio 3 */}
+              <SwiperSlide>
+                <div className="portfolio__content grid swiper-slide">
+                  <img
+                    src={portfolio3}
+                    alt="Online Store"
+                    className="portfolio__img"
+                  />
+                  <div className="portfolio__data">
+                    <h3 className="portfolio__title">Online Store</h3>
+                    <p className="portfolio__description">
+                      An online store project that demonstrates my e-commerce
+                      skills.
+                    </p>
+                    <a
+                      href="#"
+                      className="button button--flex button--small portfolio__button"
+                    >
+                      Demo
+                      <i className="uil uil-arrow-right button__icon"></i>
+                    </a>
+                  </div>
                 </div>
-              </div>
-            </div>
-            {/* <!-- Add Arrows --> */}
+              </SwiperSlide>
+            </Swiper>
+
+            {/* Navigation Arrows */}
             <div className="swiper-button-next">
               <i className="uil uil-angle-right-b swiper-portfolio-icon"></i>
             </div>
@@ -640,7 +682,7 @@ function App() {
               <i className="uil uil-angle-left-b swiper-portfolio-icon"></i>
             </div>
 
-            {/* <!-- Add Pagination --> */}
+            {/* Pagination */}
             <div className="swiper-pagination"></div>
           </div>
         </section>
@@ -672,14 +714,20 @@ function App() {
           <h2 className="section__title">Testimonial</h2>
           <span className="section__subtitle">My client saying</span>
           <div className="testimonial__container container swiper-container">
-            <div className="swiper-wrapper">
-              {/* <!--==================== TESTIMONIAL 1 ====================--> */}
-              <div className="testimonial__content swiper-slide">
+            <Swiper
+              modules={[Pagination]}
+              pagination={{ clickable: true }}
+              spaceBetween={30}
+              slidesPerView={1}
+              className="swiper-wrapper"
+            >
+              {/* Testimonial 1 */}
+              <SwiperSlide className="testimonial__content swiper-slide">
                 <div className="testimonial__data">
                   <div className="testimonial__header">
                     <img
                       src={testimonial1}
-                      alt=""
+                      alt="Client"
                       className="testimonial__img"
                     />
                     <div>
@@ -696,18 +744,19 @@ function App() {
                   </div>
                 </div>
                 <p className="testimonial__description">
-                  I've worked with John on several projects and he has always
+                  I've worked with John on several projects, and he has always
                   exceeded my expectations. His creativity, attention to detail,
                   and communication are unparalleled. I highly recommend him!
                 </p>
-              </div>
-              {/* <!--==================== TESTIMONIAL 2 ====================--> */}
-              <div className="testimonial__content swiper-slide">
+              </SwiperSlide>
+
+              {/* Testimonial 2 */}
+              <SwiperSlide className="testimonial__content swiper-slide">
                 <div className="testimonial__data">
                   <div className="testimonial__header">
                     <img
                       src={testimonial2}
-                      alt=""
+                      alt="Client"
                       className="testimonial__img"
                     />
                     <div>
@@ -724,22 +773,23 @@ function App() {
                   </div>
                 </div>
                 <p className="testimonial__description">
-                  I've worked with John on several projects and he has always
+                  I've worked with John on several projects, and he has always
                   exceeded my expectations. His creativity, attention to detail,
                   and communication are unparalleled. I highly recommend him!
                 </p>
-              </div>
-              {/* <!--==================== TESTIMONIAL 3 ====================--> */}
-              <div className="testimonial__content swiper-slide">
+              </SwiperSlide>
+
+              {/* Testimonial 3 */}
+              <SwiperSlide className="testimonial__content swiper-slide">
                 <div className="testimonial__data">
                   <div className="testimonial__header">
                     <img
                       src={testimonial3}
-                      alt=""
+                      alt="Client"
                       className="testimonial__img"
                     />
                     <div>
-                      <h3 className="testimonial__name">oussama tailaba</h3>
+                      <h3 className="testimonial__name">Oussama Tailaba</h3>
                       <span className="testimonial__client">Client</span>
                     </div>
                   </div>
@@ -752,14 +802,12 @@ function App() {
                   </div>
                 </div>
                 <p className="testimonial__description">
-                  I've worked with John on several projects and he has always
+                  I've worked with John on several projects, and he has always
                   exceeded my expectations. His creativity, attention to detail,
                   and communication are unparalleled. I highly recommend him!
                 </p>
-              </div>
-            </div>
-            {/* <!-- Add Pagination --> */}
-            <div className="swiper-pagination swiper-pagination-testimonial"></div>
+              </SwiperSlide>
+            </Swiper>
           </div>
         </section>
 
