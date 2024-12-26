@@ -2,5 +2,5 @@
 
 ## Portfolio - Old Version (HTML, CSS, JS)
 
-![Portfolio Old Version](old/assets/img/portfoliodesktoplight.png)
+![Portfolio Old Version](portfolioHtmlCssJs/assets/img/portfoliodesktoplight.png)
 
