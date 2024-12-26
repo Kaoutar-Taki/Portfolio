@@ -6,7 +6,7 @@ const Projects: React.FC = () => {
       <h2 className="section__title">Services</h2>
       <span className="section__subtitle">What i offer</span>
 
-      <div className="services__container container grid">
+      <div className="services__container container grid lg:[grid-template-columns:repeat(3,238px)]">
         {/* <!--==================== SERVICES 1 ====================--> */}
         <div className="services__content">
           <div>

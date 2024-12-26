@@ -6,7 +6,7 @@ const Home: React.FC = () => {
     <section className="home section" id="home">
       <div className="home__container container grid">
         <div className="home__content grid">
-          <div className="home__social">
+          <div className="home__social lg:-translate-x-24">
             <a
               href="https://www.linkedin.com/in/kaoutar-taki/"
               className="home__social-icon"
@@ -24,7 +24,7 @@ const Home: React.FC = () => {
           </div>
           <div className="home__img">
             <svg
-              className="home__blob"
+              className="home__blob lg:w-[320px]"
               viewBox="0 0 200 187"
               xmlns="http://www.w3.org/2000/svg"
               xmlnsXlink="http://www.w3.org/1999/xlink"

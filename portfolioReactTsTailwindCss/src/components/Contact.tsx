@@ -29,20 +29,20 @@ const Contact: React.FC = () => {
             </div>
           </div>
         </div>
-        <form action="" className="contact__form grid">
+        <form action="" className="contact__form lg:w-[460px] grid">
           <div className="contact__inputs grid">
             <div className="contact__content">
               <label className="contact__label">Name</label>
-              <input type="text" className="contact__input" />
+              <input type="text" className="contact__input lg:grid-cols-2" />
             </div>
             <div className="contact__content">
               <label className="contact__label">Email</label>
-              <input type="email" className="contact__input" />
+              <input type="email" className="contact__input lg:grid-cols-2" />
             </div>
           </div>
           <div className="contact__content">
             <label className="contact__label">Project</label>
-            <input type="text" className="contact__input" />
+            <input type="text" className="contact__input lg:grid-cols-2" />
           </div>
           <div className="contact__content">
             <label className="contact__label">Message</label>
@@ -51,7 +51,7 @@ const Contact: React.FC = () => {
               id=""
               cols={0}
               rows={7}
-              className="contact__input"
+              className="contact__input lg:grid-cols-2"
             ></textarea>
           </div>
           <div>

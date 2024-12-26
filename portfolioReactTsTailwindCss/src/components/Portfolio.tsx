@@ -27,7 +27,7 @@ const Portfolio: React.FC = () => {
         >
           {/* Portfolio 1 */}
           <SwiperSlide>
-            <div className="portfolio__content grid swiper-slide">
+            <div className="portfolio__content lg:gap-20 grid swiper-slide">
               <img
                 src={portfolio1}
                 alt="Modern Website"
@@ -52,7 +52,7 @@ const Portfolio: React.FC = () => {
 
           {/* Portfolio 2 */}
           <SwiperSlide>
-            <div className="portfolio__content grid swiper-slide">
+            <div className="portfolio__content lg:gap-20 grid swiper-slide">
               <img
                 src={portfolio2}
                 alt="Brand Design"
@@ -76,7 +76,7 @@ const Portfolio: React.FC = () => {
 
           {/* Portfolio 3 */}
           <SwiperSlide>
-            <div className="portfolio__content grid swiper-slide">
+            <div className="portfolio__content lg:gap-20 grid swiper-slide">
               <img
                 src={portfolio3}
                 alt="Online Store"
@@ -101,11 +101,11 @@ const Portfolio: React.FC = () => {
         </Swiper>
 
         {/* Navigation Arrows */}
-        <div className="swiper-button-next">
-          <i className="uil uil-angle-right-b swiper-portfolio-icon"></i>
+        <div className="swiper-button-next ">
+          <i className="uil uil-angle-right-b swiper-portfolio-icon lg:text-[3.5rem]"></i>
         </div>
-        <div className="swiper-button-prev">
-          <i className="uil uil-angle-left-b swiper-portfolio-icon"></i>
+        <div className="swiper-button-prev lg:-left-14">
+          <i className="uil uil-angle-left-b swiper-portfolio-icon lg:text-[3.5rem]"></i>
         </div>
 
         {/* Pagination */}

@@ -3,7 +3,7 @@ import NavMenu from "./NavMenu";
 
 const Header: React.FC = () => {
   return (
-    <header className="header" id="header">
+    <header className="header lg:p-0" id="header">
       <nav className="nav container">
         <a href="#" className="nav__logo">
           Ktaki
