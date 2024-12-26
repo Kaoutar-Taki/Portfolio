@@ -2,17 +2,17 @@
 
 ## Portfolio Desktop Light Version
 
-![Portfolio Dekstop Light Version](/old/assets/img/portfoliodesktoplight.png)
+![Portfolio Dekstop Light Version](/portfolioHtmlCssJs/assets/img/portfoliodesktoplight.png)
 
 ## Portfolio Desktop Light Version
 
-![Portfolio Dekstop Light Version](/old/assets/img/portfoliodesktopdark.png)
+![Portfolio Dekstop Light Version](/portfolioHtmlCssJs/assets/img/portfoliodesktopdark.png)
 
 ## Portfolio Mobile Light Version
 
-![Portfolio Mobile Light Version](/old/assets/img/portfoliomobilelight.png)
+![Portfolio Mobile Light Version](/portfolioHtmlCssJs/assets/img/portfoliomobilelight.png)
 
 ## Portfolio Mobile Dark Version
 
-![Portfolio Mobile Dark Version](/old/assets/img/portfoliomobiledark.png)
+![Portfolio Mobile Dark Version](/portfolioHtmlCssJs/assets/img/portfoliomobiledark.png)
 
