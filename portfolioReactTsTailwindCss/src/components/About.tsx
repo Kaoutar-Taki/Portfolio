@@ -1,6 +1,6 @@
 import React from "react";
 import about from "../img/about.jpg";
-import pdf from "../pdf/Alexa-Cv.pdf";
+import pdf from "../pdf/CV_KAOUTAR_TAKI_fr.pdf";
 const About: React.FC = () => {
   return (
     <section className="about section" id="about">
