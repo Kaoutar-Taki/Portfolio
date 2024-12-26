@@ -4,7 +4,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="footer">
       <div className="footer__bg">
-        <div className="lg:p-0 footer__container container grid">
+        <div className="footer__container container grid md:px-4 md:mx-auto lg:p-0">
           <div>
             <h1 className="footer__title">KTAKI</h1>
             <span className="footer__subtitle">Web Developer</span>

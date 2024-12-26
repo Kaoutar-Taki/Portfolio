@@ -2,11 +2,14 @@ import React from "react";
 
 const Projects: React.FC = () => {
   return (
-    <section className="services section" id="services">
+    <section
+      className="services section md:py-[6rem] md:pb-[2rem]"
+      id="services"
+    >
       <h2 className="section__title">Services</h2>
-      <span className="section__subtitle">What i offer</span>
+      <span className="section__subtitle md:mb-16">What i offer</span>
 
-      <div className="services__container container grid lg:[grid-template-columns:repeat(3,238px)]">
+      <div className="services__container container grid md:mx-auto lg:[grid-template-columns:repeat(3,238px)]">
         {/* <!--==================== SERVICES 1 ====================--> */}
         <div className="services__content">
           <div>

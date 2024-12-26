@@ -2,10 +2,10 @@ import React from "react";
 
 const Contact: React.FC = () => {
   return (
-    <section className="contact section" id="contact">
+    <section className="contact section md:py-[6rem] md:pb-[2rem]" id="contact">
       <h2 className="section__title">COntact Me</h2>
-      <span className="section__subtitle">Get in touch</span>
-      <div className="contact__container container grid">
+      <span className="section__subtitle md:mb-16">Get in touch</span>
+      <div className="contact__container container md:mx-auto grid">
         <div>
           <div className="contact__information">
             <i className="uil uil-phone contact__icon"></i>

@@ -7,10 +7,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 const Testimonial: React.FC = () => {
   return (
-    <section className="testimonial section">
+    <section className="testimonial section md:py-[6rem] md:pb-[2rem]">
       <h2 className="section__title">Testimonial</h2>
-      <span className="section__subtitle">My client saying</span>
-      <div className="testimonial__container container swiper-container">
+      <span className="section__subtitle md:mb-16">My client saying</span>
+      <div className="testimonial__container container swiper-container md:mx-auto">
         <Swiper
           modules={[Pagination]}
           pagination={{ clickable: true }}

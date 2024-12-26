@@ -2,10 +2,10 @@ import React from "react";
 
 const Qualification: React.FC = () => {
   return (
-    <section className="qualification section">
+    <section className="qualification section md:py-[6rem] md:pb-[2rem]">
       <h2 className="section__title">Qualification</h2>
-      <span className="section__subtitle">My personal journey</span>
-      <div className="qualification__container container">
+      <span className="section__subtitle md:mb-16">My personal journey</span>
+      <div className="qualification__container container md:mx-auto">
         <div className="qualification__tabs">
           <div
             className="qualification__button button--flex qualification__active"

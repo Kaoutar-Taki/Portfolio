@@ -3,11 +3,11 @@ import about from "../img/about.jpg";
 import pdf from "../pdf/CV_KAOUTAR_TAKI_fr.pdf";
 const About: React.FC = () => {
   return (
-    <section className="about section" id="about">
+    <section className="about section md:py-[6rem] md:pb-[2rem]" id="about">
       <h2 className="section__title">About Me</h2>
-      <span className="section__subtitle">My introduction</span>
-      <div className="about__container container grid">
-        <img src={about} alt="" className="about__img" />
+      <span className="section__subtitle md:mb-16">My introduction</span>
+      <div className="about__container container grid md:mx-auto md:gap-20">
+        <img src={about} alt="" className="about__img md:w-[350px]" />
         <div className="about__data">
           <p className="about__description">
             Bonjour, je suis Kaoutar Taki, Développeuse Full Stack passionné par

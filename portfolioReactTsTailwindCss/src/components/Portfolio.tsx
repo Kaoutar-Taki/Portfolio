@@ -6,11 +6,14 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 const Portfolio: React.FC = () => {
   return (
-    <section className="portfolio section" id="portfolio">
+    <section
+      className="portfolio section md:py-[6rem] md:pb-[2rem]"
+      id="portfolio"
+    >
       <h2 className="section__title">Portfolio</h2>
-      <span className="section__subtitle">Most recent work</span>
+      <span className="section__subtitle md:mb-16">Most recent work</span>
 
-      <div className="portfolio__container container swiper-container">
+      <div className="portfolio__container container md:mx-auto swiper-container">
         <Swiper
           className="swiper-wrapper"
           modules={[Navigation, Pagination]}

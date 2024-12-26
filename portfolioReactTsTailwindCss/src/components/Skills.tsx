@@ -2,10 +2,10 @@ import React from "react";
 
 const Skills: React.FC = () => {
   return (
-    <section className="skills section" id="skills">
+    <section className="skills section md:py-[6rem] md:pb-[2rem]" id="skills">
       <h2 className="section__title">Skills</h2>
-      <span className="section__subtitle">My technical level</span>
-      <div className="skills__container container grid">
+      <span className="section__subtitle md:mb-16">My technical level</span>
+      <div className="skills__container container grid md:mx-auto">
         <div>
           {/* <!--==================== SKILLS 1 ====================--> */}
           <div className="skills__content skills__open">

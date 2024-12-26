@@ -3,9 +3,9 @@ import profile from "../img/perfil.png";
 
 const Home: React.FC = () => {
   return (
-    <section className="home section" id="home">
-      <div className="home__container container grid">
-        <div className="home__content grid">
+    <section className="home section md:py-[6rem] md:pb-[2rem]" id="home">
+      <div className="home__container container grid md:gap-20 md:mx-auto">
+        <div className="home__content grid md:pt-[5.5rem] md:gap-8">
           <div className="home__social lg:-translate-x-24">
             <a
               href="https://www.linkedin.com/in/kaoutar-taki/"
@@ -24,7 +24,7 @@ const Home: React.FC = () => {
           </div>
           <div className="home__img">
             <svg
-              className="home__blob lg:w-[320px]"
+              className="home__blob md:w-[270px] lg:w-[320px]"
               viewBox="0 0 200 187"
               xmlns="http://www.w3.org/2000/svg"
               xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -66,8 +66,11 @@ const Home: React.FC = () => {
             </a>
           </div>
         </div>
-        <div className="home__scroll">
-          <a href="#about" className="home__scroll-button button--flex">
+        <div className="home__scroll md:block">
+          <a
+            href="#about"
+            className="home__scroll-button button--flex md:ml-12"
+          >
             <i className="uil uil-mouse-alt home__scroll-mouse"></i>
             <span className="home__scroll-name">Scroll Down</span>
             <i className="uil uil-arrow-down home__scroll-arrow"></i>

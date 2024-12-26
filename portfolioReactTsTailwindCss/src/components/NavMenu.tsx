@@ -12,8 +12,8 @@ const navItems = [
 
 const NavMenu: React.FC = () => {
   return (
-    <div className="nav__menu" id="nav-menu">
-      <ul className="nav__list grid">
+    <div className="nav__menu md:ml-auto md:p-0" id="nav-menu">
+      <ul className="nav__list grid md:flex md:gap-8">
         {navItems.map((item, index) => (
           <NavItem
             key={index}
@@ -24,7 +24,7 @@ const NavMenu: React.FC = () => {
           />
         ))}
       </ul>
-      <i className="uil uil-times nav__close" id="nav-close"></i>
+      <i className="uil uil-times nav__close md:hidden" id="nav-close"></i>
     </div>
   );
 };

@@ -11,7 +11,7 @@ import Testimonial from "./Testimonial";
 import Contact from "./Contact";
 const Main: React.FC = () => {
   return (
-    <main className="main lg:p-0">
+    <main className="main md:px-4 lg:p-0">
       <Home />
       <About />
       <Skills />

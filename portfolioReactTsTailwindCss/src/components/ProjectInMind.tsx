@@ -3,9 +3,9 @@ import project from "../img/project.png";
 
 const ProjectInMind: React.FC = () => {
   return (
-    <section className="project section">
+    <section className="project section md:py-[6rem] md:pb-[2rem]">
       <div className="project__bg">
-        <div className="project__container container grid">
+        <div className="project__container container md:mx-auto grid">
           <div className="project__data">
             <h2 className="project__title">You have a new project</h2>
             <p className="project__description">
