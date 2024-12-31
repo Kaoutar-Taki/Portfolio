@@ -12,8 +12,11 @@ const navItems: NavItemType[] = [
   { href: "#home", icon: "uil uil-estate", label: "Home", active: true },
   { href: "#about", icon: "uil uil-user", label: "About" },
   { href: "#skills", icon: "uil uil-file-alt", label: "Skills" },
-  { href: "#services", icon: "uil uil-briefcase-alt", label: "Services" },
-  { href: "#portfolio", icon: "uil uil-scenery", label: "Portfolio" },
+  {
+    href: "#qualification",
+    icon: "uil uil-graduation-cap",
+    label: "Qualification",
+  },
   { href: "#contact", icon: "uil uil-message", label: "Contactme" },
 ];
 

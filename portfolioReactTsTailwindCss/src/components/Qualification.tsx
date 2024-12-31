@@ -4,7 +4,10 @@ const Qualification: React.FC = () => {
   const [activeTab, setActiveTab] = useState<"education" | "work">("education");
 
   return (
-    <section className="qualification section md:py-[6rem] md:pb-[2rem]">
+    <section
+      className="qualification section md:py-[6rem] md:pb-[2rem]"
+      id="qualification"
+    >
       <h2 className="section__title">Qualification</h2>
       <span className="section__subtitle md:mb-16">My personal journey</span>
       <div className="qualification__container container md:mx-auto">
@@ -113,9 +116,12 @@ const Qualification: React.FC = () => {
                 </div>
                 <div>
                   <h3 className="qualification__title">Dabador</h3>
-                  <span className="qualification__subtitle"></span>
+                  <span className="qualification__subtitle">
+                    Développeur full-stack
+                  </span>
                   <div className="qualification__calendar">
                     <i className="uil uil-calendar-alt"></i>
+                    10 oct 2023 - 10 avril 2024
                   </div>
                 </div>
               </div>
