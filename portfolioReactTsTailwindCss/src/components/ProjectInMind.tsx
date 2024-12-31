@@ -1,5 +1,5 @@
 import React from "react";
-import project from "../img/project.png";
+import project from "../img/perfil.png";
 
 const ProjectInMind: React.FC = () => {
   return (

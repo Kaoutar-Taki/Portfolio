@@ -110,7 +110,7 @@ const Home: React.FC = () => {
                 <image
                   className="home__blob-img"
                   x="12"
-                  y="18"
+                  y="30"
                   xlinkHref={profile}
                 />
               </g>
@@ -145,3 +145,4 @@ const Home: React.FC = () => {
 };
 
 export default Home;
+

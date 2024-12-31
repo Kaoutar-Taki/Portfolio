@@ -1,5 +1,5 @@
 import React from "react";
-import about from "../img/about.jpg";
+import about from "../img/perfil.png";
 import pdf from "../pdf/CV_KAOUTAR_TAKI_fr.pdf";
 const About: React.FC = () => {
   return (

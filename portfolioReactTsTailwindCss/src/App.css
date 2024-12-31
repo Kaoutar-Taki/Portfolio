@@ -7,7 +7,7 @@
 
   /*========== Colors ==========*/
   /* Change favorite color */
-  --hue-color: 340;
+  --hue-color: 23;
   /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
 
   /* HSL color mode */
@@ -1320,3 +1320,4 @@ img {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
