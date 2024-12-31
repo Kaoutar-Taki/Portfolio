@@ -5,21 +5,30 @@ import testimonial3 from "../img/testimonial3.jpg";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+
 const Testimonial: React.FC = () => {
   return (
     <section className="testimonial section md:py-[6rem] md:pb-[2rem]">
       <h2 className="section__title">Testimonial</h2>
       <span className="section__subtitle md:mb-16">My client saying</span>
-      <div className="testimonial__container container swiper-container md:mx-auto">
+      <div className="testimonial__container container md:mx-auto">
         <Swiper
           modules={[Pagination]}
-          pagination={{ clickable: true }}
+          pagination={{ clickable: true, dynamicBullets: true }}
           spaceBetween={30}
           slidesPerView={1}
-          className="swiper-wrapper"
+          breakpoints={{
+            568: {
+              slidesPerView: 2,
+            },
+          }}
         >
           {/* Testimonial 1 */}
-          <SwiperSlide className="testimonial__content swiper-slide">
+          <SwiperSlide className="testimonial__content">
             <div className="testimonial__data">
               <div className="testimonial__header">
                 <img
@@ -33,11 +42,12 @@ const Testimonial: React.FC = () => {
                 </div>
               </div>
               <div>
-                <i className="uil uil-star testimonial__icon-star"></i>
-                <i className="uil uil-star testimonial__icon-star"></i>
-                <i className="uil uil-star testimonial__icon-star"></i>
-                <i className="uil uil-star testimonial__icon-star"></i>
-                <i className="uil uil-star testimonial__icon-star"></i>
+                {[...Array(5)].map((_, index) => (
+                  <i
+                    key={index}
+                    className="uil uil-star testimonial__icon-star"
+                  ></i>
+                ))}
               </div>
             </div>
             <p className="testimonial__description">
@@ -47,63 +57,32 @@ const Testimonial: React.FC = () => {
             </p>
           </SwiperSlide>
 
-          {/* Testimonial 2 */}
-          <SwiperSlide className="testimonial__content swiper-slide">
-            <div className="testimonial__data">
-              <div className="testimonial__header">
-                <img
-                  src={testimonial2}
-                  alt="Client"
-                  className="testimonial__img"
-                />
+          {/* Additional Testimonials */}
+          {[testimonial2, testimonial3].map((imgSrc, index) => (
+            <SwiperSlide key={index} className="testimonial__content">
+              <div className="testimonial__data">
+                <div className="testimonial__header">
+                  <img src={imgSrc} alt="Client" className="testimonial__img" />
+                  <div>
+                    <h3 className="testimonial__name">Client {index + 2}</h3>
+                    <span className="testimonial__client">Client</span>
+                  </div>
+                </div>
                 <div>
-                  <h3 className="testimonial__name">Jane Smith</h3>
-                  <span className="testimonial__client">Client</span>
+                  {[...Array(5)].map((_, index) => (
+                    <i
+                      key={index}
+                      className="uil uil-star testimonial__icon-star"
+                    ></i>
+                  ))}
                 </div>
               </div>
-              <div>
-                <i className="uil uil-star testimonial__icon-star"></i>
-                <i className="uil uil-star testimonial__icon-star"></i>
-                <i className="uil uil-star testimonial__icon-star"></i>
-                <i className="uil uil-star testimonial__icon-star"></i>
-                <i className="uil uil-star testimonial__icon-star"></i>
-              </div>
-            </div>
-            <p className="testimonial__description">
-              I've worked with John on several projects, and he has always
-              exceeded my expectations. His creativity, attention to detail, and
-              communication are unparalleled. I highly recommend him!
-            </p>
-          </SwiperSlide>
-
-          {/* Testimonial 3 */}
-          <SwiperSlide className="testimonial__content swiper-slide">
-            <div className="testimonial__data">
-              <div className="testimonial__header">
-                <img
-                  src={testimonial3}
-                  alt="Client"
-                  className="testimonial__img"
-                />
-                <div>
-                  <h3 className="testimonial__name">Oussama Tailaba</h3>
-                  <span className="testimonial__client">Client</span>
-                </div>
-              </div>
-              <div>
-                <i className="uil uil-star testimonial__icon-star"></i>
-                <i className="uil uil-star testimonial__icon-star"></i>
-                <i className="uil uil-star testimonial__icon-star"></i>
-                <i className="uil uil-star testimonial__icon-star"></i>
-                <i className="uil uil-star testimonial__icon-star"></i>
-              </div>
-            </div>
-            <p className="testimonial__description">
-              I've worked with John on several projects, and he has always
-              exceeded my expectations. His creativity, attention to detail, and
-              communication are unparalleled. I highly recommend him!
-            </p>
-          </SwiperSlide>
+              <p className="testimonial__description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+                sit amet libero eget justo facilisis pellentesque.
+              </p>
+            </SwiperSlide>
+          ))}
         </Swiper>
       </div>
     </section>

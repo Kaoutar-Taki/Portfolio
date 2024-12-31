@@ -106,21 +106,21 @@
 // });
 
 /*==================== TESTIMONIAL ====================*/
-let swiperTestimonial = new Swiper('.testimonial__container', {
-    loop: true,
-    grabCursor: true,
-    spaceBetween: 28,
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-        dynamicBullets: true,
-    },
-    breakpoints: {
-        568: {
-            slidesPerView: 2,
-        },
-    }
-});
+// let swiperTestimonial = new Swiper('.testimonial__container', {
+//     loop: true,
+//     grabCursor: true,
+//     spaceBetween: 28,
+//     pagination: {
+//         el: '.swiper-pagination',
+//         clickable: true,
+//         dynamicBullets: true,
+//     },
+//     breakpoints: {
+//         568: {
+//             slidesPerView: 2,
+//         },
+//     }
+// });
 
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
 const sections = document.querySelectorAll('section[id]')
