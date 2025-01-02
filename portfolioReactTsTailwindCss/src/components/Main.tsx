@@ -7,7 +7,7 @@ import Qualification from "./Qualification";
 import Contact from "./Contact";
 const Main: React.FC = () => {
   return (
-    <main className="main md:px-4 lg:p-0">
+    <main className="px-4 md:px-8 lg:px-0">
       <Home />
       <About />
       <Skills />

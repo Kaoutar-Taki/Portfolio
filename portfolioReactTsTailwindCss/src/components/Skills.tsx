@@ -22,10 +22,10 @@ const Skills: React.FC = () => {
       subtitle: "More than 1 years",
       icon: "uil uil-brackets-curly",
       skills: [
-        { name: "HTML", level: "90%", percentageClass: "skills__html" },
-        { name: "CSS", level: "80%", percentageClass: "skills__css" },
-        { name: "JavaScript", level: "60%", percentageClass: "skills__js" },
-        { name: "React", level: "85%", percentageClass: "skills__react" },
+        { name: "HTML", level: "90%", percentageClass: "w-[90%]" },
+        { name: "CSS", level: "80%", percentageClass: "w-[80%]" },
+        { name: "JavaScript", level: "60%", percentageClass: "w-[60%]" },
+        { name: "React", level: "85%", percentageClass: "w-[85%]" },
       ],
     },
     {
@@ -33,17 +33,15 @@ const Skills: React.FC = () => {
       subtitle: "More than 1 years",
       icon: "uil uil-server-network",
       skills: [
-        { name: "PHP", level: "80%", percentageClass: "skills__php" },
-        { name: "LARAVEL", level: "70%", percentageClass: "skills__laravel" },
+        { name: "PHP", level: "80%", percentageClass: "w-[80%]" },
+        { name: "LARAVEL", level: "70%", percentageClass: "w-[70%]" },
       ],
     },
     {
       title: "Designer",
       subtitle: "More than 1 years",
       icon: "uil uil-swatchbook",
-      skills: [
-        { name: "FIGMA", level: "80%", percentageClass: "skills__figma" },
-      ],
+      skills: [{ name: "FIGMA", level: "80%", percentageClass: "w-[80%]" }],
     },
   ];
 
@@ -52,10 +50,14 @@ const Skills: React.FC = () => {
   };
 
   return (
-    <section className="skills section md:py-[6rem] md:pb-[2rem]" id="skills">
-      <h2 className="section__title">Skills</h2>
-      <span className="section__subtitle md:mb-16">My technical level</span>
-      <div className="skills__container container grid md:mx-auto">
+    <section className="skills py-8 md:py-24" id="skills">
+      <h2 className="text-xl md:text-4xl text-center text-[hsl(23,8%,15%)] font-semibold">
+        Skills
+      </h2>
+      <span className="text-sm md:text-base text-center mb-12 md:mb-16">
+        My technical level
+      </span>
+      <div className="row-gap-0 md:grid-cols-2 mx-6 sm:mx-4 md:mx-auto max-w-full sm:max-w-[768px] gap-6 grid">
         {skillGroups.map((group, index) => (
           <div
             key={index}
@@ -64,30 +66,36 @@ const Skills: React.FC = () => {
             }`}
           >
             <div
-              className="skills__header"
+              className="flex items-center mb-10 cursor-pointer"
               onClick={() => toggleAccordion(index)}
             >
-              <i className={`${group.icon} skills__icon`}></i>
+              <i className={`${group.icon} text-[2rem] text-[#db784e]`}></i>
               <div>
-                <h1 className="skills__titles">{group.title}</h1>
-                <span className="skills__subtitle">{group.subtitle}</span>
+                <h1 className="flex justify-between mb-2 text-[hsl(23,8%,15%)] font-semibold">
+                  {group.title}
+                </h1>
+                <span className="text-[0.813rem] text-[#3b2a2b]">
+                  {group.subtitle}
+                </span>
               </div>
               <i
                 className={`uil ${
                   activeIndex === index ? "uil-angle-up" : "uil-angle-down"
-                } skills__arrow`}
+                } text-[2rem] text-[#db784e]`}
               ></i>
             </div>
-            <div className="skills__list grid">
+            <div className="row-gap-6 pl-11 gap-6 grid">
               {group.skills.map((skill, i) => (
                 <div className="skills__data" key={i}>
-                  <div className="skills__titles">
-                    <h3 className="skills__name">{skill.name}</h3>
+                  <div className="flex justify-between mb-2">
+                    <h3 className="text-[0.938rem] font-500 text-[hsl(23,8%,15%)] font-semibold">
+                      {skill.name}
+                    </h3>
                     <span className="skills__number">{skill.level}</span>
                   </div>
-                  <div className="skills__bar">
+                  <div className="h-[5px] rounded-sm bg-[#e3b7b7]">
                     <span
-                      className={`skills__percentage ${skill.percentageClass}`}
+                      className={`block h-[5px] rounded-sm bg-[#db784e] ${skill.percentageClass}`}
                     ></span>
                   </div>
                 </div>

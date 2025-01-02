@@ -33,10 +33,10 @@ const NavMenu: React.FC = () => {
 
   return (
     <div
-      className={`nav__menu md:ml-auto md:p-0 ${isMenuOpen ? "show-menu" : ""}`}
+      className={`md:ml-auto md:p-0 ${isMenuOpen ? "bottom-0" : ""}`}
       id="nav-menu"
     >
-      <ul className="nav__list grid md:flex md:gap-8">
+      <ul className="grid-cols-3 md:space-x-8 sm:gap-0 gap-6 grid md:flex md:gap-8 list-none">
         {navItems.map((item, index) => (
           <NavItem
             key={index}
@@ -48,12 +48,12 @@ const NavMenu: React.FC = () => {
         ))}
       </ul>
       <i
-        className="uil uil-times nav__close md:hidden"
+        className="uil uil-times absolute right-5 bottom-2 text-xl cursor-pointer text-first-color hover:text-[hsl(23, 57%, 53%)] md:hidden"
         id="nav-close"
         onClick={handleCloseMenu}
       ></i>
       <div
-        className="nav__toggle md:hidden"
+        className="text-main-color font-500 text-base cursor-pointer hover:text-[hsl(23, 57%, 53%)] md:hidden"
         id="nav-toggle"
         onClick={handleToggleMenu}
       >

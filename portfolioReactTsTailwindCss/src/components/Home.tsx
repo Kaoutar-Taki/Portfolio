@@ -14,12 +14,16 @@ const Home: React.FC = () => {
 
         if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
           document
-            .querySelector(`.nav__menu a[href*=${sectionId}]`)
-            ?.classList.add("active-link");
+            .querySelector(
+              `fixed bottom-[-100%] left-0 w-full bg-[hsl(23,60%,99%)] p-8 pb-16 sm:p-1 sm:pb-16 md:ml-auto md:p-0 shadow-md rounded-t-[1.5rem] transition-all a[href*=${sectionId}]`
+            )
+            ?.classList.add("text-[#db784e]");
         } else {
           document
-            .querySelector(`.nav__menu a[href*=${sectionId}]`)
-            ?.classList.remove("active-link");
+            .querySelector(
+              `fixed bottom-[-100%] left-0 w-full bg-[hsl(23,60%,99%)] p-8 pb-16 sm:p-1 sm:pb-16 md:ml-auto md:p-0 shadow-md rounded-t-[1.5rem] transition-all a[href*=${sectionId}]`
+            )
+            ?.classList.remove("text-[#db784e]");
         }
       });
     };
@@ -37,6 +41,9 @@ const Home: React.FC = () => {
     };
 
     // Show Scroll Up
+    // .show-scroll {
+    //   bottom: 5rem;
+    // }
     const scrollUp = () => {
       const scrollUp = document.getElementById("scroll-up");
       if (scrollUp) {
@@ -64,13 +71,13 @@ const Home: React.FC = () => {
   }, []);
 
   return (
-    <section className="home section md:py-[6rem] md:pb-[2rem]" id="home">
-      <div className="home__container container grid md:gap-20 md:mx-auto">
-        <div className="home__content grid md:pt-[5.5rem] md:gap-8">
-          <div className="home__social lg:-translate-x-24">
+    <section className="home py-8 md:py-24" id="home">
+      <div className="sm:gap-20 mx-6 sm:mx-4 max-w-full sm:max-w-[768px] grid gap-6 md:gap-20 md:mx-auto">
+        <div className="grid gap-6 grid-cols-[0.5fr_3fr] pt-14 md:grid-cols-[0.25fr_3fr] sm:grid-cols-[max-content_1fr_1fr] md:pt-20 md:gap-8">
+          <div className="grid gap-6 md:translate-x-[-6rem] lg:-translate-x-24">
             <a
               href="https://www.linkedin.com/in/kaoutar-taki/"
-              className="home__social-icon"
+              className="text-xl text-[hsl(23, 69%, 61%)] hover:text-[hsl(23, 57%, 53%)] no-underline"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -78,16 +85,16 @@ const Home: React.FC = () => {
             </a>
             <a
               href="https://github.com/Kaoutar-Taki"
-              className="home__social-icon"
+              className="text-xl text-[hsl(23, 69%, 61%)] hover:text-[hsl(23, 57%, 53%)] no-underline"
               target="_blank"
               rel="noopener noreferrer"
             >
               <i className="uil uil-github-alt"></i>
             </a>
           </div>
-          <div className="home__img">
+          <div className="home__img md:order-1 md:justify-self-center">
             <svg
-              className="home__blob md:w-[270px] lg:w-[320px]"
+              className="fill-[hsl(23, 69%, 61%)] w-[200px] sm:w-[180px] md:w-[270px] lg:w-[320px]"
               viewBox="0 0 200 187"
               xmlns="http://www.w3.org/2000/svg"
               xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -108,7 +115,7 @@ const Home: React.FC = () => {
                     -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"
                 />
                 <image
-                  className="home__blob-img"
+                  className="w-[170px]"
                   x="12"
                   y="30"
                   xlinkHref={profile}
@@ -116,27 +123,37 @@ const Home: React.FC = () => {
               </g>
             </svg>
           </div>
-          <div className="home__data">
-            <h1 className="home__title">Hi, I'am Kaoutar Taki</h1>
-            <h3 className="home__subtitle">Full Stack Developer</h3>
-            <p className="home__description">
+          <div className="grid-column-1/3 md:grid-cols-1">
+            <h1 className="text-[hsl(23,8%,15%)] font-semibold text-[2rem]">
+              Hi, I'am Kaoutar Taki
+            </h1>
+            <h3 className="text-[1.125rem] text-[#3b2a2b] font-500 mb-3">
+              Full Stack Developer
+            </h3>
+            <p className="mb-8">
               Développeuse Full Stack avec une expérience approfondie dans le
               développement front-end et back-end. Passionnée par la création de
               solutions innovantes et efficaces.
             </p>
-            <a href="contact" className="button button--flex">
-              Contact Me <i className="uil uil-message button__icon"></i>
+            <a
+              href="contact"
+              className="bg-[#db784e] text-white py-4 px-6 rounded-lg font-500 hover:bg-[#ca4f3f] inline-flex items-center no-underline"
+            >
+              Contact Me{" "}
+              <i className="uil uil-message text-[1.25rem] ml-2 transition-all"></i>
             </a>
           </div>
         </div>
-        <div className="home__scroll md:block">
+        <div className="hidden sm:block md:block">
           <a
             href="#about"
-            className="home__scroll-button button--flex md:ml-12"
+            className="text-[#d56a00] transition-all hover:translate-y-1 sm:ml-12 inline-flex items-center md:ml-12 no-underline"
           >
-            <i className="uil uil-mouse-alt home__scroll-mouse"></i>
-            <span className="home__scroll-name">Scroll Down</span>
-            <i className="uil uil-arrow-down home__scroll-arrow"></i>
+            <i className="uil uil-mouse-alt text-2xl"></i>
+            <span className="text-sm text-[#3a2e23] font-500 mr-1">
+              Scroll Down
+            </span>
+            <i className="uil uil-arrow-down text-xl"></i>
           </a>
         </div>
       </div>
