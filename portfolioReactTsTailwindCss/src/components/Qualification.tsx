@@ -8,7 +8,7 @@ const Qualification: React.FC = () => {
       <h2 className="text-xl md:text-4xl text-center text-[hsl(23,8%,15%)] font-semibold">
         Qualification
       </h2>
-      <span className="text-sm md:text-base text-center mb-12 md:mb-16">
+      <span className="text-sm md:text-base text-center text-[hsl(23,8%,42%)] block mb-10">
         My personal journey
       </span>
       <div className="qualification__container mx-6 sm:mx-4 md:mx-auto max-w-full sm:max-w-[768px]">

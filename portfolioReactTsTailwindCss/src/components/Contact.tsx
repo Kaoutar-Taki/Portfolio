@@ -6,10 +6,10 @@ const Contact: React.FC = () => {
       <h2 className="text-xl md:text-4xl text-center text-[hsl(23,8%,15%)] font-semibold">
         Contact Me
       </h2>
-      <span className="text-sm md:text-base text-center mb-12 md:mb-16">
+      <span className="text-sm md:text-base text-center text-[hsl(23,8%,42%)] block mb-10">
         Get in touch
       </span>
-      <div className="row-gap-12 md:grid-cols-2 mx-6 sm:mx-4 max-w-full sm:max-w-[768px] md:mx-auto grid gap-6">
+      <div className="mx-6 sm:mx-4 max-w-full sm:max-w-[768px] md:mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
           <div className="flex mb-8">
             <i className="uil uil-phone text-[2rem] text-[#db784e] mr-3"></i>
@@ -25,7 +25,7 @@ const Contact: React.FC = () => {
           <div className="flex mb-8">
             <i className="uil uil-envelope text-[2rem] text-[#db784e] mr-3"></i>
             <div>
-              <h3 className="text-[1.125rem] font-font-500 text-[hsl(23,8%,15%)]">
+              <h3 className="text-[1.125rem] font-[500] text-[hsl(23,8%,15%)]">
                 Email
               </h3>
               <span className="text-[0.813rem] text-[#3b2a2b]">
@@ -36,7 +36,7 @@ const Contact: React.FC = () => {
           <div className="flex mb-8">
             <i className="uil uil-map-marker text-[2rem] text-[#db784e] mr-3"></i>
             <div>
-              <h3 className="text-[1.125rem] font-500 text-[hsl(23,8%,15%)]">
+              <h3 className="text-[1.125rem] font-[500] text-[hsl(23,8%,15%)]">
                 Location
               </h3>
               <span className="text-[0.813rem] text-[#3b2a2b]">
@@ -45,7 +45,7 @@ const Contact: React.FC = () => {
             </div>
           </div>
         </div>
-        <form action="" className="grid gap-6 w-full md:w-[460px] lg:w-[460px]">
+        <form action="" className="grid gap-6 w-full">
           <div className="contact__inputs grid gap-6">
             <div className="bg-[#e9b9b2] rounded-lg py-3 px-4 mb-1">
               <label className="text-[0.75rem] text-[hsl(23, 8%, 15%)] dark:text-[hsl(23, 8%, 95%)]">
@@ -53,7 +53,7 @@ const Contact: React.FC = () => {
               </label>
               <input
                 type="text"
-                className="w-full bg-[hsl(23, 70%, 96%)] text-[hsl(23, 8%, 45%)] font-['Roboto Mono', 'monospace'] text-normal py-1 px-2 md:grid-cols-2 lg:grid-cols-2"
+                className="w-full bg-[hsl(23, 70%, 96%)] text-[hsl(23, 8%, 45%)] font-['Roboto Mono', 'monospace'] py-1 px-2"
               />
             </div>
             <div className="bg-[#e9b9b2] rounded-lg py-3 px-4 mb-1">
@@ -62,7 +62,7 @@ const Contact: React.FC = () => {
               </label>
               <input
                 type="email"
-                className="w-full bg-[hsl(23, 70%, 96%)] text-[hsl(23, 8%, 45%)] font-['Roboto Mono', 'monospace'] text-normal py-1 px-2 md:grid-cols-2 lg:grid-cols-2"
+                className="w-full bg-[hsl(23, 70%, 96%)] text-[hsl(23, 8%, 45%)] font-['Roboto Mono', 'monospace'] py-1 px-2"
               />
             </div>
           </div>
@@ -72,7 +72,7 @@ const Contact: React.FC = () => {
             </label>
             <input
               type="text"
-              className="w-full bg-[hsl(23, 70%, 96%)] text-[hsl(23, 8%, 45%)] font-['Roboto Mono', 'monospace'] text-normal py-1 px-2 md:grid-cols-2 lg:grid-cols-2"
+              className="w-full bg-[hsl(23, 70%, 96%)] text-[hsl(23, 8%, 45%)] font-['Roboto Mono', 'monospace'] py-1 px-2"
             />
           </div>
           <div className="bg-[#e9b9b2] rounded-lg py-3 px-4 mb-1">
@@ -84,7 +84,7 @@ const Contact: React.FC = () => {
               id=""
               cols={0}
               rows={7}
-              className="w-full bg-[hsl(23, 70%, 96%)] text-[hsl(23, 8%, 45%)] font-['Roboto Mono', 'monospace'] text-normal py-1 px-2 md:grid-cols-2 lg:grid-cols-2"
+              className="w-full bg-[hsl(23, 70%, 96%)] text-[hsl(23, 8%, 45%)] font-['Roboto Mono', 'monospace'] py-1 px-2"
             ></textarea>
           </div>
           <div>

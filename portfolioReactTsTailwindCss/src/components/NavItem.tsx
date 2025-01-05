@@ -4,19 +4,17 @@ interface NavItemProps {
   href: string;
   icon: string;
   label: string;
-  active?: boolean;
 }
 
-const NavItem: React.FC<NavItemProps> = ({ href, icon, label, active }) => {
+const NavItem: React.FC<NavItemProps> = ({ href, icon, label }) => {
   return (
-    <li className="nav__item">
+    <li>
       <a
         href={href}
-        className={`flex flex-col items-center text-[0.813rem] text-[#3b2a2b] font-500 hover:text-[#db784e] no-underline ${
-          active ? "text-[#db784e]" : ""
-        }`}
+        className="flex items-center gap-2 text-gray-700 dark:text-gray-300 hover:text-orange-500 transition text-sm font-medium"
       >
-        <i className={`${icon} text-xl md:hidden`}></i> {label}
+        <i className={`${icon} text-lg`}></i>
+        <span>{label}</span>
       </a>
     </li>
   );

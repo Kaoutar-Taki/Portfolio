@@ -46,6 +46,7 @@ const Skills: React.FC = () => {
   ];
 
   const toggleAccordion = (index: number) => {
+    console.log("Toggling index:", index);
     setActiveIndex(activeIndex === index ? null : index);
   };
 
@@ -54,10 +55,10 @@ const Skills: React.FC = () => {
       <h2 className="text-xl md:text-4xl text-center text-[hsl(23,8%,15%)] font-semibold">
         Skills
       </h2>
-      <span className="text-sm md:text-base text-center mb-12 md:mb-16">
+      <span className="text-sm md:text-base text-center text-[hsl(23,8%,42%)] block mb-10">
         My technical level
       </span>
-      <div className="row-gap-0 md:grid-cols-2 mx-6 sm:mx-4 md:mx-auto max-w-full sm:max-w-[768px] gap-6 grid">
+      <div className="gap-6 mx-6 sm:mx-4 md:mx-auto max-w-full sm:max-w-[768px] md:grid md:grid-cols-2">
         {skillGroups.map((group, index) => (
           <div
             key={index}
@@ -68,6 +69,7 @@ const Skills: React.FC = () => {
             <div
               className="flex items-center mb-10 cursor-pointer"
               onClick={() => toggleAccordion(index)}
+              aria-expanded={activeIndex === index ? "true" : "false"}
             >
               <i className={`${group.icon} text-[2rem] text-[#db784e]`}></i>
               <div>
@@ -84,14 +86,20 @@ const Skills: React.FC = () => {
                 } text-[2rem] text-[#db784e]`}
               ></i>
             </div>
-            <div className="row-gap-6 pl-11 gap-6 grid">
+            <div
+              className={`pl-11 gap-6 ${
+                activeIndex === index ? "block" : "hidden"
+              }`}
+            >
               {group.skills.map((skill, i) => (
                 <div className="skills__data" key={i}>
                   <div className="flex justify-between mb-2">
-                    <h3 className="text-[0.938rem] font-500 text-[hsl(23,8%,15%)] font-semibold">
+                    <h3 className="text-[0.938rem] font-semibold text-[hsl(23,8%,15%)]">
                       {skill.name}
                     </h3>
-                    <span className="skills__number">{skill.level}</span>
+                    <span className="text-[0.875rem] text-[#3b2a2b]">
+                      {skill.level}
+                    </span>
                   </div>
                   <div className="h-[5px] rounded-sm bg-[#e3b7b7]">
                     <span
