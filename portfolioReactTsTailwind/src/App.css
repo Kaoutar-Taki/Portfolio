@@ -6,9 +6,6 @@
   --header-height: 3rem;
 
   /*========== Colors ==========*/
-  /* Change favorite color */
-  --hue-color: 23;
-  /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
 
   /* HSL color mode */
   --first-color: hsl(23, 69%, 61%);
@@ -25,26 +22,24 @@
   --scroll-thumb-color: hsl(23, 12%, 80%);
 
   /*========== Font and typography ==========*/
-  --body-font: "Poppins", sans-serif;
+  --body-font: 'Poppins', sans-serif;
 
-  /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
   --big-font-size: 2rem;
   --h1-font-size: 1.5rem;
   --h2-font-size: 1.25rem;
   --h3-font-size: 1.125rem;
-  --normal-font-size: 0.938rem;
-  --small-font-size: 0.813rem;
-  --smaller-font-size: 0.75rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
 
   /*========== Font weight ==========*/
   --font-medium: 500;
   --font-semi-bold: 600;
 
   /*========== Margenes Bottom ==========*/
-  /* .25rem = 4px, .5rem = 8px, .75rem = 12px ... */
-  --mb-0-25: 0.25rem;
-  --mb-0-5: 0.5rem;
-  --mb-0-75: 0.75rem;
+  --mb-0-25: .25rem;
+  --mb-0-5: .5rem;
+  --mb-0-75: .75rem;
   --mb-1: 1rem;
   --mb-1-5: 1.5rem;
   --mb-2: 2rem;
@@ -65,8 +60,8 @@
     --h2-font-size: 1.5rem;
     --h3-font-size: 1.25rem;
     --normal-font-size: 1rem;
-    --small-font-size: 0.875rem;
-    --smaller-font-size: 0.813rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
   }
 }
 
@@ -147,7 +142,6 @@ img {
 
 .section__title {
   font-size: var(--h1-font-size);
-  /* color: var(--title-color); */
 }
 
 .section__subtitle {
@@ -220,7 +214,7 @@ img {
     padding: 2rem 1.5rem 4rem;
     box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
     border-radius: 1.5rem 1.5rem 0 0;
-    transition: 0.3s;
+    transition: .3s;
   }
 }
 
@@ -249,7 +243,7 @@ img {
 .nav__close {
   position: absolute;
   right: 1.3rem;
-  bottom: 0.5rem;
+  bottom: .5rem;
   font-size: 1.5rem;
   cursor: pointer;
   color: var(--first-color);
@@ -280,7 +274,7 @@ img {
 }
 
 .home__content {
-  grid-template-columns: 0.5fr 3fr;
+  grid-template-columns: .5fr 3fr;
   padding-top: 3.5rem;
   align-items: center;
 }
@@ -334,11 +328,11 @@ img {
 
 .home__scroll-button {
   color: var(--first-color);
-  transition: 0.3s;
+  transition: .3s;
 }
 
 .home__scroll-button:hover {
-  transform: translateY(0.25rem);
+  transform: translateY(.25rem);
 }
 
 .home__scroll-mouse {
@@ -362,7 +356,7 @@ img {
   background-color: var(--first-color);
   color: #fff;
   padding: 1rem;
-  border-radius: 0.5rem;
+  border-radius: .5rem;
   font-weight: var(--font-medium);
 }
 
@@ -373,7 +367,7 @@ img {
 .button__icon {
   font-size: 1.25rem;
   margin-left: var(--mb-0-5);
-  transition: 0.3s;
+  transition: .3s;
 }
 
 .button--white {
@@ -391,7 +385,7 @@ img {
 }
 
 .button--small {
-  padding: 0.75rem 1rem;
+  padding: .75rem 1rem;
 }
 
 .button--link {
@@ -408,7 +402,7 @@ img {
 /*==================== ABOUT ====================*/
 .about__img {
   width: 200px;
-  border-radius: 0.5rem;
+  border-radius: .5rem;
   justify-self: center;
   align-self: center;
 }
@@ -478,7 +472,7 @@ img {
 
 .skills__arrow {
   margin-left: auto;
-  transition: 0.4s;
+  transition: .4s;
 }
 
 .skills__list {
@@ -500,7 +494,7 @@ img {
 .skills__bar,
 .skills__percentage {
   height: 5px;
-  border-radius: 0.25rem;
+  border-radius: .25rem;
 }
 
 .skills__bar {
@@ -635,14 +629,14 @@ img {
 .services__content {
   position: relative;
   background-color: var(--container-color);
-  padding: 3.5rem 0.5rem 1.25rem 1.5rem;
-  border-radius: 0.25rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
-  transition: 0.3s;
+  padding: 3.5rem .5rem 1.25rem 1.5rem;
+  border-radius: .25rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .15);
+  transition: .3s;
 }
 
 .services__content:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, .15);
 }
 
 .services__icon {
@@ -664,7 +658,7 @@ img {
 }
 
 .services__button:hover .button__icon {
-  transform: translateX(0.25rem);
+  transform: translateX(.25rem);
 }
 
 .services__modal {
@@ -673,7 +667,7 @@ img {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, .5);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -681,14 +675,14 @@ img {
   z-index: var(--z-modal);
   opacity: 0;
   visibility: hidden;
-  transition: 0.3s;
+  transition: .3s;
 }
 
 .services__modal-content {
   position: relative;
   background-color: var(--container-color);
   padding: 1.5rem;
-  border-radius: 0.5rem;
+  border-radius: .5rem;
 }
 
 .services__modal-services {
@@ -736,7 +730,7 @@ img {
 
 .portfolio__img {
   width: 265px;
-  border-radius: 0.5rem;
+  border-radius: .5rem;
   justify-self: center;
 }
 
@@ -750,12 +744,12 @@ img {
 }
 
 .portfolio__button:hover .button__icon {
-  transform: translateX(0.25rem);
+  transform: translateX(.25rem);
 }
 
 .swiper-button-prev::after,
 .swiper-button-next::after {
-  content: "";
+  content: '';
 }
 
 .swiper-portfolio-icon {
@@ -764,14 +758,14 @@ img {
 }
 
 .swiper-button-prev {
-  left: -0.5rem;
+  left: -.5rem;
 }
 
 .swiper-button-next {
-  right: -0.5rem;
+  right: -.5rem;
 }
 
-.swiper-container-horizontal > .swiper-pagination-bullets {
+.swiper-container-horizontal>.swiper-pagination-bullets {
   bottom: -2.5rem;
 }
 
@@ -882,8 +876,8 @@ img {
 
 .contact__content {
   background-color: var(--input-color);
-  border-radius: 0.5rem;
-  padding: 0.75rem 1rem 0.25rem;
+  border-radius: .5rem;
+  padding: .75rem 1rem .25rem;
 }
 
 .contact__label {
@@ -899,7 +893,7 @@ img {
   font-size: var(--normal-font-size);
   border: none;
   outline: none;
-  padding: 0.25rem 0.5rem 0.5rem 0;
+  padding: .25rem .5rem .5rem 0;
 }
 
 /*==================== FOOTER ====================*/
@@ -964,11 +958,11 @@ img {
   right: 1rem;
   bottom: -20%;
   background-color: var(--first-color);
-  opacity: 0.8;
-  padding: 0 0.3rem;
-  border-radius: 0.4rem;
+  opacity: .8;
+  padding: 0 .3rem;
+  border-radius: .4rem;
   z-index: var(--z-tooltip);
-  transition: 0.4s;
+  transition: .4s;
 }
 
 .scrollup:hover {
@@ -987,14 +981,14 @@ img {
 
 /*========== SCROLL BAR ==========*/
 ::-webkit-scrollbar {
-  width: 0.6rem;
+  width: .60rem;
   background-color: var(--scroll-bar-color);
-  border-radius: 0.5rem;
+  border-radius: .5rem;
 }
 
 ::-webkit-scrollbar-thumb {
   background-color: var(--scroll-thumb-color);
-  border-radius: 0.5rem;
+  border-radius: .5rem;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -1003,14 +997,15 @@ img {
 
 /*==================== MEDIA QUERIES ====================*/
 /* For small devices */
-@media screen and (min-width: 350px) {
+@media screen and (min-width : 350px) {
+
   .container {
     margin-left: var(--mb-1);
     margin-right: var(--mb-1);
   }
 
   .nav__menu {
-    padding: 2rem 0.25rem 4rem;
+    padding: 2rem .25rem 4rem;
   }
 
   .nav__list {
@@ -1018,7 +1013,7 @@ img {
   }
 
   .home__content {
-    grid-template-columns: 0.25fr 3fr;
+    grid-template-columns: .25fr 3fr;
   }
 
   .home__blob {
@@ -1030,7 +1025,7 @@ img {
   }
 
   .qualification__data {
-    gap: 0.5rem;
+    gap: .5rem
   }
 
   .services__container {
@@ -1043,7 +1038,7 @@ img {
   }
 
   .services__modal {
-    padding: 0 0.5rem;
+    padding: 0 .5rem;
   }
 
   .project__img {
@@ -1068,7 +1063,7 @@ img {
 }
 
 /* For medium devices */
-@media screen and (min-width: 568px) {
+@media screen and (min-width : 568px) {
   .home__content {
     grid-template-columns: max-content 1fr 1fr;
   }
@@ -1093,12 +1088,12 @@ img {
 
   .qualification__sections {
     display: grid;
-    grid-template-columns: 0.6fr;
+    grid-template-columns: .6fr;
     justify-content: center;
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width : 768px) {
   .container {
     margin-left: auto;
     margin-right: auto;
@@ -1202,7 +1197,7 @@ img {
   }
 
   .qualification__sections {
-    grid-template-columns: 0.5fr;
+    grid-template-columns: .5fr;
   }
 
   .services__container {
@@ -1247,7 +1242,7 @@ img {
   }
 
   .project__data {
-    padding-top: 0.8rem;
+    padding-top: .8rem;
   }
 
   .footer__container {
@@ -1273,7 +1268,8 @@ img {
 }
 
 /* For large devices */
-@media screen and (min-width: 1024px) {
+@media screen and (min-width : 1024px) {
+
   .header,
   .main,
   .footer__container {
@@ -1308,7 +1304,7 @@ img {
     right: -3.5rem;
   }
 
-  .swiper-container-horizontal > .swiper-pagination-bullets {
+  .swiper-container-horizontal>.swiper-pagination-bullets {
     bottom: -4.5rem;
   }
 
