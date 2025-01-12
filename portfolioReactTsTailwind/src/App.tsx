@@ -1,5 +1,4 @@
 import "./App.css";
-import "./main.js";
 import ScrollTop from "./components/ScrollTop.js";
 import Footer from "./components/Footer.js";
 import Main from "./components/Main.js";
