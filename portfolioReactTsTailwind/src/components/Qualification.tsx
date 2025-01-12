@@ -1,34 +1,59 @@
+import { useState } from "react";
+
 const Qualification = () => {
+  const [activeTab, setActiveTab] = useState("education");
+
+  const handleTabClick = (tab: string) => {
+    setActiveTab(tab);
+  };
+
   return (
-    <>
-      <section className="qualification section">
-        <h2 className="section__title">Qualification</h2>
-        <span className="section__subtitle">My personal journey</span>
-        <div className="qualification__container container">
-          <div className="qualification__tabs">
-            <div
-              className="qualification__button button--flex qualification__active"
-              data-target="#education"
-            >
-              <i className="uil uil-graduation-cap qualification__icon"></i>
-              Education
-            </div>
-            <div
-              className="qualification__button button--flex"
-              data-target="#work"
-            >
-              <i className="uil uil-briefcase-alt qualification__icon"></i>
-              Work
-            </div>
+    <section className="qualification section">
+      <h2 className="section__title">Qualification</h2>
+      <span className="section__subtitle">My personal journey</span>
+      <div className="qualification__container container">
+        <div
+          className="qualification__tabs"
+          role="tablist"
+          aria-label="Qualification tabs"
+        >
+          <div
+            className={`qualification__button button--flex ${
+              activeTab === "education" ? "qualification__active" : ""
+            }`}
+            role="tab"
+            aria-selected={activeTab === "education"}
+            aria-controls="education"
+            onClick={() => handleTabClick("education")}
+          >
+            <i className="uil uil-graduation-cap qualification__icon"></i>
+            Education
           </div>
-          <div className="qualification__sections">
-            {/* <!--==================== QUALIFICATION CONTENT 1 ====================--> */}
+          <div
+            className={`qualification__button button--flex ${
+              activeTab === "work" ? "qualification__active" : ""
+            }`}
+            role="tab"
+            aria-selected={activeTab === "work"}
+            aria-controls="work"
+            onClick={() => handleTabClick("work")}
+          >
+            <i className="uil uil-briefcase-alt qualification__icon"></i>
+            Work
+          </div>
+        </div>
+
+        <div className="qualification__sections">
+          {/* Education Tab Content */}
+          {activeTab === "education" && (
             <div
               className="qualification__content qualification__active"
               data-content
               id="education"
+              role="tabpanel"
+              aria-labelledby="education-tab"
             >
-              {/* <!--==================== QUALIFICATION 1 ====================--> */}
+              {/* Education 1 */}
               <div className="qualification__data">
                 <div>
                   <h3 className="qualification__title">
@@ -47,7 +72,7 @@ const Qualification = () => {
                   <span className="qualification__line"></span>
                 </div>
               </div>
-              {/* <!--==================== QUALIFICATION 2 ====================--> */}
+              {/* Education 2 */}
               <div className="qualification__data">
                 <div></div>
                 <div>
@@ -67,13 +92,13 @@ const Qualification = () => {
                   </div>
                 </div>
               </div>
-              {/* <!--==================== QUALIFICATION 3 ====================--> */}
+              {/* Education 3 */}
               <div className="qualification__data">
                 <div>
                   <h3 className="qualification__title">
                     Programme de formation en développement digital.
                   </h3>
-                  <span className="qualification__subtitle"> 1337 </span>
+                  <span className="qualification__subtitle">1337</span>
                   <div className="qualification__calendar">
                     <i className="uil uil-calendar-alt"></i>
                     11 sept. - 6 oct. 2023
@@ -81,13 +106,21 @@ const Qualification = () => {
                 </div>
                 <div>
                   <span className="qualification__rounder"></span>
-                  {/* <!-- <span className="qualification__line"></span> --> */}
                 </div>
               </div>
             </div>
-            {/* <!--==================== QUALIFICATION CONTENT 2 ====================--> */}
-            <div className="qualification__content" data-content id="work">
-              {/* <!--==================== QUALIFICATION 1 ====================--> */}
+          )}
+
+          {/* Work Tab Content */}
+          {activeTab === "work" && (
+            <div
+              className="qualification__content qualification__active"
+              data-content
+              id="work"
+              role="tabpanel"
+              aria-labelledby="work-tab"
+            >
+              {/* Work 1 */}
               <div className="qualification__data">
                 <div>
                   <h3 className="qualification__title">Digital Capital</h3>
@@ -104,7 +137,7 @@ const Qualification = () => {
                   <span className="qualification__line"></span>
                 </div>
               </div>
-              {/* <!--==================== QUALIFICATION 2 ====================--> */}
+              {/* Work 2 */}
               <div className="qualification__data">
                 <div></div>
                 <div>
@@ -113,22 +146,18 @@ const Qualification = () => {
                 </div>
                 <div>
                   <h3 className="qualification__title">Dabador</h3>
-                  <span className="qualification__subtitle"> </span>
                   <div className="qualification__calendar">
                     <i className="uil uil-calendar-alt"></i>
                   </div>
                 </div>
               </div>
-              {/* <!--==================== QUALIFICATION 3 ====================--> */}
+              {/* Work 3 */}
               <div className="qualification__data">
                 <div>
                   <h3 className="qualification__title">Integral Tech</h3>
                   <span className="qualification__subtitle">
                     Développement d'une nouvelle solution ERP avec React,
-                    TypeScript, Redux, et Tailwind. Traduction de l'ERP en
-                    français, anglais, et arabe. Élaboration de la documentation
-                    API avec Laravel. Révision des fautes d'orthographe dans
-                    l'ancien ERP.
+                    TypeScript, Redux, et Tailwind.
                   </span>
                   <div className="qualification__calendar">
                     <i className="uil uil-calendar-alt"></i>
@@ -137,14 +166,13 @@ const Qualification = () => {
                 </div>
                 <div>
                   <span className="qualification__rounder"></span>
-                  {/* <!-- <span className="qualification__line"></span> --> */}
                 </div>
               </div>
             </div>
-          </div>
+          )}
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 };
 
