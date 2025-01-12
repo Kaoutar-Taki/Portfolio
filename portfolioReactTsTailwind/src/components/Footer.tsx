@@ -1,55 +1,59 @@
 const Footer = () => {
   return (
     <>
-      <footer className="footer">
-        <div className="footer__bg">
-          <div className="footer__container container grid">
+      <footer className="pt-8">
+        <div className="pt-8 pb-12 bg-[hsl(23,69%,61%)] dark:bg-[hsl(23,30%,8%)] md:pt-12 md:pb-14">
+          <div className="max-w-3xl mx-6 sm:mx-4 md:mx-auto grid gap-6 gap-y-14 md:grid-cols-2 md:px-4 lg:grid-cols-3 lg:px-0">
             <div>
-              <h1 className="footer__title">KTAKI</h1>
-              <span className="footer__subtitle">Web Developer</span>
+              <h1 className="text-white text-2xl md:text-4xl mb-1">KTAKI</h1>
+              <span className="text-white text-sm md:text-base">
+                Développeur Web
+              </span>
             </div>
-            <ul className="footer__links">
+            <ul className="flex flex-col gap-y-6 md:flex-row md:gap-x-8">
               <li>
-                <a href="#services" className="footer__link">
-                  Services
+                <a
+                  href="#skills"
+                  className="text-white hover:text-[hsl(23,92%,85%)]"
+                >
+                  Compétences
                 </a>
               </li>
               <li>
-                <a href="#portfolio" className="footer__link">
-                  Portfolio
+                <a
+                  href="#qualification"
+                  className="text-white hover:text-[hsl(23,92%,85%)]"
+                >
+                  Qualification
                 </a>
               </li>
               <li>
-                <a href="#contact" className="footer__link">
-                  Contactme
+                <a
+                  href="#contact"
+                  className="text-white hover:text-[hsl(23,92%,85%)]"
+                >
+                  Contactez-moi
                 </a>
               </li>
             </ul>
-            <div className="footer__socials">
+            <div className="md:justify-self-end">
               <a
-                href="https://www.facebook.com/"
+                href="https://github.com/Kaoutar-Taki"
                 target="_blank"
-                className="footer__social"
+                className="text-white text-xl mr-6 hover:text-[hsl(23,92%,85%)]"
               >
-                <i className="uil uil-facebook-f"></i>
+                <i className="uil uil-github"></i>
               </a>
               <a
-                href="https://www.instagram.com/"
+                href="www.linkedin.com/in/kaoutar-taki"
                 target="_blank"
-                className="footer__social"
+                className="text-white text-xl mr-6 hover:text-[hsl(23,92%,85%)]"
               >
-                <i className="uil uil-instagram"></i>
-              </a>
-              <a
-                href="https://twitter.com/"
-                target="_blank"
-                className="footer__social"
-              >
-                <i className="uil uil-twitter-alt"></i>
+                <i className="uil uil-linkedin"></i>
               </a>
             </div>
           </div>
-          <p className="footer__copy">
+          <p className="text-center text-[hsl(23,8%,65%)] text-xs mt-12 md:mt-18">
             &#169; 2024 Kaoutar Taki. Tous droits réservés.
           </p>
         </div>
