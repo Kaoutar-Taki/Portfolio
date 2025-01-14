@@ -56,54 +56,73 @@ const Header = () => {
 
   return (
     <header className="header" id="header" ref={headerRef}>
-      <nav className="nav container">
+      {/* header */}
+      <nav className="nav max-w-3xl mx-6 sm:mx-4 md:mx-auto">
+        {/* nav */}
         <a href="#" className="nav__logo">
           Ktaki
         </a>
-
+        {/* nav__logo */}
         <div className="nav__menu" id="nav-menu" ref={navMenuRef}>
-          <ul className="nav__list grid">
+          {/* nav__menu  */}
+          <ul className="nav__list grid gap-6">
+            {/* nav__list */}
             <li className="nav__item">
+              {/* nav__item  */}
               <a
                 href="#home"
                 className="nav__link active-link"
                 onClick={handleLinkClick}
               >
                 <i className="uil uil-estate nav__icon"></i>
+                {/* nav__icon */}
                 Home
               </a>
+              {/* nav__link , active-link */}
             </li>
             <li className="nav__item">
+              {/* nav__item */}
               <a href="#about" className="nav__link" onClick={handleLinkClick}>
                 <i className="uil uil-user nav__icon"></i>
+                {/* nav__icon */}
                 About
               </a>
+              {/* nav__link */}
             </li>
             <li className="nav__item">
+              {/* nav__item  */}
               <a href="#skills" className="nav__link" onClick={handleLinkClick}>
                 <i className="uil uil-file-alt nav__icon"></i>
+                {/* nav__icon */}
                 Skills
               </a>
+              {/* nav__link  */}
             </li>
             <li className="nav__item">
+              {/* nav__item  */}
               <a
                 href="#qualification"
                 className="nav__link"
                 onClick={handleLinkClick}
               >
                 <i className="uil uil-briefcase-alt nav__icon"></i>
+                {/* nav__icon */}
                 Qualification
               </a>
+              {/* nav__link   */}
             </li>
             <li className="nav__item">
+              {/* nav__item */}
               <a
                 href="#contact"
                 className="nav__link"
                 onClick={handleLinkClick}
               >
                 <i className="uil uil-message nav__icon"></i>
+                {/* nav__icon */}
                 Contact Me
               </a>
+              {/* nav__link   */}
             </li>
           </ul>
           <button
@@ -113,10 +132,13 @@ const Header = () => {
           >
             <i className="uil uil-times"></i>
           </button>
+          {/* nav__close */}
         </div>
 
         <div className="nav__btns">
+          {/* nav__btns */}
           <button className="nav__toggle" onClick={openMenu}>
+            {/* nav__toggle  */}
             <i className="uil uil-apps"></i>
           </button>
           <button
@@ -128,6 +150,7 @@ const Header = () => {
               className={`uil ${theme === "dark" ? "uil-sun" : "uil-moon"}`}
             ></i>
           </button>
+          {/* change-theme */}
         </div>
       </nav>
     </header>

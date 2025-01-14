@@ -22,8 +22,13 @@ const ScrollTop = () => {
   }, []);
 
   return (
-    <a href="#" className="scrollup" id="scroll-up" aria-label="Scroll to top">
-      <i className="uil uil-arrow-up scrollup__icon"></i>
+    <a
+      href="#"
+      className="fixed right-4 bottom-[-20%] bg-[hsl(23,69%,61%)] opacity-80 px-1 py-0.5 rounded-md z-10 transition duration-500 hover:bg-[hsl(23,57%,53%)]"
+      id="scroll-up"
+      aria-label="Scroll to top"
+    >
+      <i className="uil uil-arrow-up text-xl text-white"></i>
     </a>
   );
 };

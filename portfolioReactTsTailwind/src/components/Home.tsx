@@ -3,9 +3,13 @@ const Home = () => {
   return (
     <>
       <section className="home section" id="home">
-        <div className="home__container container grid">
-          <div className="home__content grid">
+        {/* home, section */}
+        <div className="home__container max-w-3xl mx-6 sm:mx-4 md:mx-auto grid gap-6">
+          {/* home__container */}
+          <div className="home__content grid gap-6">
+            {/* home__content  */}
             <div className="home__social">
+              {/* home__social  */}
               <a
                 href="https://www.linkedin.com/in/kaoutar-taki/"
                 className="home__social-icon"
@@ -13,6 +17,7 @@ const Home = () => {
               >
                 <i className="uil uil-linkedin-alt"></i>
               </a>
+              {/* home__social-icon */}
               <a
                 href="https://github.com/Kaoutar-Taki"
                 className="home__social-icon"
@@ -20,14 +25,17 @@ const Home = () => {
               >
                 <i className="uil uil-github-alt"></i>
               </a>
+              {/* home__social-icon  */}
             </div>
             <div className="home__img">
+              {/* home__img  */}
               <svg
                 className="home__blob"
                 viewBox="0 0 200 187"
                 xmlns="http://www.w3.org/2000/svg"
                 xmlnsXlink="http://www.w3.org/1999/xlink"
               >
+                {/* home__blob  */}
                 <mask id="mask0" mask-type="alpha">
                   <path
                     d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547
@@ -49,27 +57,39 @@ const Home = () => {
                     y="18"
                     xlinkHref={profile}
                   />
+                  {/* home__blob-img */}
                 </g>
               </svg>
             </div>
             <div className="home__data">
+              {/* home__data  */}
               <h1 className="home__title">Hi, I'am Kaoutar Taki</h1>
+              {/* home__title */}
               <h3 className="home__subtitle">Full Stack Developer</h3>
+              {/* home__subtitle  */}
               <p className="home__description">
+                {/* home__description */}
                 Développeuse Full Stack avec une expérience approfondie dans le
                 développement front-end et back-end. Passionnée par la création
                 de solutions innovantes et efficaces.
               </p>
               <a href="contact" className="button button--flex">
                 Contact Me <i className="uil uil-message button__icon"></i>
+                {/* button__icon  */}
               </a>
+              {/* button, button--flex  */}
             </div>
           </div>
           <div className="home__scroll">
+            {/* home__scroll  */}
             <a href="#about" className="home__scroll-button button--flex">
+              {/* home__scroll-button, button--flex  */}
               <i className="uil uil-mouse-alt home__scroll-mouse"></i>
+              {/* home__scroll-mouse  */}
               <span className="home__scroll-name">Scroll Down</span>
+              {/* home__scroll-name  */}
               <i className="uil uil-arrow-down home__scroll-arrow"></i>
+              {/* home__scroll-arrow   */}
             </a>
           </div>
         </div>
