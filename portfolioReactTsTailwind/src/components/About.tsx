@@ -3,70 +3,68 @@ import CV from "../assets/pdf/CV_KAOUTAR_TAKI_fr.pdf";
 const About = () => {
   return (
     <>
-      <section className="about section" id="about">
-        {/* about,section */}
-        <h2 className="section__title">About Me</h2>
-        {/* section__title  */}
-        <span className="section__subtitle">My introduction</span>
-        {/* section__subtitle  */}
-        <div className="about__container max-w-3xl mx-6 sm:mx-4 md:mx-auto grid gap-6">
-          {/* about__container  */}
-          <img src={profile} alt="" className="about__img" />
-          {/* about__img  */}
-          <div className="about__data">
-            {/* about__data  */}
-            <p className="about__description">
-              {/* about__description  */}
-              Bonjour, je suis Kaoutar Taki, Développeuse Full Stack passionné
+      <section className="about p-8 md:p-24 md:pt-24 md:pb-8" id="about">
+        <h2 className="text-2xl md:text-4xl text-center">À propos de moi</h2>
+        <span className="block text-sm md:text-base mb-12 text-center md:mb-16">
+          Mon introduction
+        </span>
+        <div className="sm:grid-cols-2 md:gap-x-20 max-w-3xl mx-6 sm:mx-4 md:mx-auto grid gap-6">
+          <img
+            src={profile}
+            alt="Profil de Kaoutar Taki"
+            className="w-[200px] rounded-lg justify-self-center self-center md:w-[350px]"
+          />
+          <div>
+            <p className="text-center mb-6 md:text-left">
+              Bonjour, je suis Kaoutar Taki, Développeuse Full Stack passionnée
               par l'art de transformer des lignes de code en expériences
               interactives et fonctionnelles. Depuis mes premières lignes de
-              HTML, je suis fasciné par le potentiel de la programmation pour
+              HTML, je suis fascinée par le potentiel de la programmation pour
               créer des solutions innovantes aux défis du numérique.
             </p>
-            <p className="about__description">
-              {/* about__description */}
+            <p className="text-center mb-6 md:text-left">
               Je suis constamment à la recherche de nouvelles opportunités pour
               apprendre et grandir en tant que développeuse, et j'ai hâte de
               contribuer à des projets passionnants qui repoussent les limites
               de la technologie.
             </p>
-            <div className="about__info">
-              {/* about__info  */}
+            <div className="flex justify-evenly mb-10 md:justify-between">
               <div>
-                <span className="about__info-title">01+</span>
-                {/* about__info-title  */}
-                <span className="about__info-name">
-                  {/* about__info-name  */}
-                  Years <br />
-                  experience
+                <span className="text-xl md:text-2xl font-semibold text-[hsl(23,8%,15%)] dark:text-[hsl(23,8%,95%)]">
+                  01+
+                </span>
+                <span className="text-xs md:text-sm block text-center">
+                  Années <br />
+                  d'expérience
                 </span>
               </div>
               <div>
-                <span className="about__info-title">03+</span>
-                {/* about__info-title */}
-                <span className="about__info-name">
-                  {/* about__info-name */}
-                  Completed <br />
-                  project
+                <span className="text-xl md:text-2xl font-semibold text-[hsl(23,8%,15%)] dark:text-[hsl(23,8%,95%)]">
+                  03+
+                </span>
+                <span className="text-xs md:text-sm block text-center">
+                  Projets <br />
+                  réalisés
                 </span>
               </div>
               <div>
-                <span className="about__info-title">02+</span>
-                {/* about__info-title */}
-                <span className="about__info-name">
-                  {/* about__info-name */}
-                  Companies <br />
-                  worked
+                <span className="text-xl md:text-2xl font-semibold text-[hsl(23,8%,15%)] dark:text-[hsl(23,8%,95%)]">
+                  02+
+                </span>
+                <span className="text-xs md:text-sm block text-center">
+                  Entreprises <br />
+                  où j'ai travaillé
                 </span>
               </div>
             </div>
-            <div className="about__buttons">
-              {/* about__buttons  */}
-              <a download="" href={CV} className="button button--flex">
-                {/* button ,button--flex  */}
-                Download CV
-                <i className="uil uil-download-alt button__icon"></i>
-                {/* button__icon   */}
+            <div className="flex justify-center md:justify-start">
+              <a
+                download
+                href={CV}
+                className="inline-block bg-[hsl(23,69%,61%)] text-white p-4 rounded-lg font-medium hover:bg-[hsl(23,57%,53%)] items-center"
+              >
+                Télécharger le CV
+                <i className="uil uil-download-alt text-xl ml-2 transition duration-300"></i>
               </a>
             </div>
           </div>
