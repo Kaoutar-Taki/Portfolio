@@ -3,7 +3,7 @@ import CV from "../assets/pdf/CV_KAOUTAR_TAKI_fr.pdf";
 const About = () => {
   return (
     <>
-      <section className="about p-8 md:p-24 md:pt-24 md:pb-8" id="about">
+      <section className="p-8 md:p-24 md:pt-24 md:pb-8" id="about">
         <h2 className="text-2xl md:text-4xl text-center">À propos de moi</h2>
         <span className="block text-sm md:text-base mb-12 text-center md:mb-16">
           Mon introduction
