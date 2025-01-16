@@ -1,97 +1,89 @@
 const ContactMe = () => {
   return (
     <>
-      <section className="contact section" id="contact">
-        {/* contact,section  */}
-        <h2 className="section__title">Contact Me</h2>
-        {/* section__title  */}
-        <span className="section__subtitle">Get in touch</span>
-        {/* section__subtitle  */}
-        <div className="contact__container max-w-3xl mx-6 sm:mx-4 md:mx-auto grid gap-6">
-          {/* contact__container */}
+      <section className="p-8 md:p-24 md:pt-24 md:pb-8" id="contact">
+        <h2 className="text-2xl md:text-4xl text-center">Contactez-moi</h2>
+        <span className="block text-sm md:text-base mb-12 text-center md:mb-16">
+          Entrer en contact
+        </span>
+        <div className="gap-y-12 sm:grid-cols-2 max-w-3xl mx-6 sm:mx-4 md:mx-auto grid gap-6">
           <div>
-            <div className="contact__information">
-              {/* contact__information  */}
-              <i className="uil uil-phone contact__icon"></i>
-              {/* contact__icon   */}
+            <div className="flex mb-8">
+              <i className="uil uil-phone text-3xl text-[hsl(23,69%,61%)] mr-3"></i>
               <div>
-                <h3 className="contact__title">Call Me</h3>
-                {/* contact__title   */}
-                <span className="contact__subtitle">+212 6 41 89 90 24</span>
-                {/* contact__subtitle   */}
+                <h3 className="text-lg md:text-xl font-medium">Appelez-moi</h3>
+                <span className="text-xs md:text-sm text-[hsl(23,8%,65%)]">
+                  +212 6 41 89 90 24
+                </span>
               </div>
             </div>
-            <div className="contact__information">
-              {/* contact__information */}
-              <i className="uil uil-envelope contact__icon"></i>
-              {/* contact__icon   */}
+            <div className="flex mb-8">
+              <i className="uil uil-envelope text-3xl text-[hsl(23,69%,61%)] mr-3"></i>
               <div>
-                <h3 className="contact__title">Email</h3>
-                {/* contact__title    */}
-                <span className="contact__subtitle">
-                  {/* contact__subtitle    */}
+                <h3 className="text-lg md:text-xl font-medium">Email</h3>
+                <span className="text-xs md:text-sm text-[hsl(23,8%,65%)]">
                   takikaoutar01@gmail.com
                 </span>
               </div>
             </div>
-            <div className="contact__information">
-              {/* contact__information  */}
-              <i className="uil uil-map-marker contact__icon"></i>
-              {/* contact__icon   */}
+            <div className="flex mb-8">
+              <i className="uil uil-map-marker text-3xl text-[hsl(23,69%,61%)] mr-3"></i>
               <div>
-                <h3 className="contact__title">Location</h3>
-                {/* contact__title    */}
-                <span className="contact__subtitle">Morocco - MARRAKECH</span>
-                {/* contact__subtitle    */}
+                <h3 className="text-lg md:text-xl font-medium">Emplacement</h3>
+                <span className="text-xs md:text-sm text-[hsl(23,8%,65%)]">
+                  Maroc - MARRAKECH
+                </span>
               </div>
             </div>
           </div>
-          <form action="" className="contact__form grid gap-6">
-            {/* contact__form*/}
-            <div className="contact__inputs grid gap-6">
-              {/* contact__inputs */}
-              <div className="contact__content">
-                {/* contact__content */}
-                <label className="contact__label">Name</label>
-                {/* contact__label  */}
-                <input type="text" className="contact__input" />
-                {/* contact__input  */}
+          <form className="w-96 grid gap-6">
+            <div className="grid gap-6">
+              <div className="bg-[hsl(23,70%,96%)] dark:bg-[hsl(23,29%,16%)] rounded-lg p-3.5 pl-4 pr-4 pt-3">
+                <label className="text-xs md:text-sm text-[hsl(23, 8%, 15%)] dark:text-[hsl(23, 8%, 95%)]">
+                  Nom
+                </label>
+                <input
+                  type="text"
+                  className="w-full bg-[hsl(23,70%,96%)] dark:bg-[hsl(23,29%,16%)] text-[hsl(23,8%,45%)] dark:text-[hsl(23,8%,75%)] font-mono text-sm md:text-base border-none outline-none p-1 pt-0.5 pl-0 lg:grid-cols-2"
+                />
               </div>
-              <div className="contact__content">
-                {/* contact__content */}
-                <label className="contact__label">Email</label>
-                {/* contact__label   */}
-                <input type="email" className="contact__input" />
-                {/* contact__input   */}
+              <div className="bg-[hsl(23,70%,96%)] dark:bg-[hsl(23,29%,16%)] rounded-lg p-3.5 pl-4 pr-4 pt-3">
+                <label className="text-xs md:text-sm text-[hsl(23, 8%, 15%)] dark:text-[hsl(23, 8%, 95%)]">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  className="w-full bg-[hsl(23,70%,96%)] dark:bg-[hsl(23,29%,16%)] text-[hsl(23,8%,45%)] dark:text-[hsl(23,8%,75%)] font-mono text-sm md:text-base border-none outline-none p-1 pt-0.5 pl-0 lg:grid-cols-2"
+                />
               </div>
             </div>
-            <div className="contact__content">
-              {/* contact__content  */}
-              <label className="contact__label">Project</label>
-              {/* contact__label   */}
-              <input type="text" className="contact__input" />
-              {/* contact__input    */}
+            <div className="bg-[hsl(23,70%,96%)] dark:bg-[hsl(23,29%,16%)] rounded-lg p-3.5 pl-4 pr-4 pt-3">
+              <label className="text-xs md:text-sm text-[hsl(23, 8%, 15%)] dark:text-[hsl(23, 8%, 95%)]">
+                Projet
+              </label>
+              <input
+                type="text"
+                className="w-full bg-[hsl(23,70%,96%)] dark:bg-[hsl(23,29%,16%)] text-[hsl(23,8%,45%)] dark:text-[hsl(23,8%,75%)] font-mono text-sm md:text-base border-none outline-none p-1 pt-0.5 pl-0 lg:grid-cols-2"
+              />
             </div>
-            <div className="contact__content">
-              {/* contact__content    */}
-              <label className="contact__label">Message</label>
-              {/* contact__label     */}
+            <div className="bg-[hsl(23,70%,96%)] dark:bg-[hsl(23,29%,16%)] rounded-lg p-3.5 pl-4 pr-4 pt-3">
+              <label className="text-xs md:text-sm text-[hsl(23, 8%, 15%)] dark:text-[hsl(23, 8%, 95%)]">
+                Message
+              </label>
               <textarea
-                name=""
-                id=""
                 cols={0}
                 rows={7}
-                className="contact__input"
+                className="w-full bg-[hsl(23,70%,96%)] dark:bg-[hsl(23,29%,16%)] text-[hsl(23,8%,45%)] dark:text-[hsl(23,8%,75%)] font-mono text-sm md:text-base border-none outline-none p-1 pt-0.5 pl-0 lg:grid-cols-2"
               ></textarea>
-              {/* contact__input     */}
             </div>
             <div>
-              <a href="#" className="button button--flex">
-                Send Message
-                <i className="uil uil-message button__icon"></i>
-                {/*button__icon */}
+              <a
+                href="#"
+                className="inline-block bg-[hsl(23,69%,61%)] text-white p-4 rounded-lg font-medium hover:bg-[hsl(23,57%,53%)] items-center"
+              >
+                Envoyer le message
+                <i className="uil uil-message text-xl ml-2 transition duration-300"></i>
               </a>
-              {/* button ,button--flex  */}
             </div>
           </form>
         </div>
