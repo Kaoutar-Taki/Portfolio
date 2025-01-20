@@ -1,43 +1,69 @@
+import { useState } from "react";
+
 const Qualification = () => {
+  const [activeTab, setActiveTab] = useState<string>("#education");
+
+  const handleTabClick = (target: string) => {
+    setActiveTab(target);
+  };
+
+  const renderTabButton = (
+    target: string,
+    iconClass: string,
+    label: string
+  ) => (
+    <div
+      className={`qualification__button button--flex ${
+        activeTab === target ? "qualification__active" : ""
+      }`}
+      data-target={target}
+      onClick={() => handleTabClick(target)}
+    >
+      <i className={`uil ${iconClass} qualification__icon`}></i>
+      {label}
+    </div>
+  );
+
+  const renderQualificationData = (
+    title: string,
+    subtitle: string,
+    date: string
+  ) => (
+    <div>
+      <h3 className="qualification__title">{title}</h3>
+      <span className="qualification__subtitle">{subtitle}</span>
+      <div className="qualification__calendar">
+        <i className="uil uil-calendar-alt"></i> {date}
+      </div>
+    </div>
+  );
   return (
     <section className="qualification section" id="qualification">
       <h2 className="section__title">Qualifications</h2>
       <span className="section__subtitle">Mon parcours personnel</span>
       <div className="qualification__container container">
         <div className="qualification__tabs">
-          <div
-            className="qualification__button button--flex qualification__active"
-            data-target="#education"
-          >
-            <i className="uil uil-graduation-cap qualification__icon"></i>
-            Éducation
-          </div>
-          <div
-            className="qualification__button button--flex"
-            data-target="#work"
-          >
-            <i className="uil uil-briefcase-alt qualification__icon"></i>
-            Expérience professionnelle
-          </div>
+          {renderTabButton("#education", "uil-graduation-cap", "Éducation")}
+          {renderTabButton(
+            "#work",
+            "uil-briefcase-alt",
+            "Expérience professionnelle"
+          )}
         </div>
         <div className="qualification__sections">
           <div
-            className="qualification__content qualification__active"
+            className={`qualification__content ${
+              activeTab === "#education" ? "qualification__active" : ""
+            }`}
             data-content
             id="education"
           >
             <div className="qualification__data">
-              <div>
-                <h3 className="qualification__title">
-                  Baccalauréat en séries professionnelles
-                </h3>
-                <span className="qualification__subtitle">
-                  Lycée Youssef Ben Tachfine et ISTA NTIC, Marrakech
-                </span>
-                <div className="qualification__calendar">
-                  <i className="uil uil-calendar-alt"></i> 2018 - 2021
-                </div>
-              </div>
+              {renderQualificationData(
+                "Baccalauréat en séries professionnelles",
+                "Lycée Youssef Ben Tachfine et ISTA NTIC, Marrakech",
+                "2018 - 2021"
+              )}
               <div>
                 <span className="qualification__rounder"></span>
                 <span className="qualification__line"></span>
@@ -49,46 +75,36 @@ const Qualification = () => {
                 <span className="qualification__rounder"></span>
                 <span className="qualification__line"></span>
               </div>
-              <div>
-                <h3 className="qualification__title">
-                  Technicien Spécialisé en Développement Digital
-                </h3>
-                <span className="qualification__subtitle">
-                  ISTA NTIC Sidi Youssef Ben Ali, Marrakech
-                </span>
-                <div className="qualification__calendar">
-                  <i className="uil uil-calendar-alt"></i> 2021 - 2023
-                </div>
-              </div>
+              {renderQualificationData(
+                "Technicien Spécialisé en Développement Digital",
+                "ISTA NTIC Sidi Youssef Ben Ali, Marrakech",
+                "2021 - 2023"
+              )}
             </div>
             <div className="qualification__data">
-              <div>
-                <h3 className="qualification__title">
-                  Programme de formation en développement digital
-                </h3>
-                <span className="qualification__subtitle">1337</span>
-                <div className="qualification__calendar">
-                  <i className="uil uil-calendar-alt"></i> 11 sept. - 6 oct.
-                  2023
-                </div>
-              </div>
+              {renderQualificationData(
+                "Programme de formation en développement digital",
+                "1337",
+                "11 sept. - 6 oct. 2023"
+              )}
               <div>
                 <span className="qualification__rounder"></span>
               </div>
             </div>
           </div>
-          <div className="qualification__content" data-content id="work">
+          <div
+            className={`qualification__content ${
+              activeTab === "#work" ? "qualification__active" : ""
+            }`}
+            data-content
+            id="work"
+          >
             <div className="qualification__data">
-              <div>
-                <h3 className="qualification__title">Digital Capital</h3>
-                <span className="qualification__subtitle">
-                  Développeur back-end, spécialisé en Symfony
-                </span>
-                <div className="qualification__calendar">
-                  <i className="uil uil-calendar-alt"></i> 26 juil. - 26 août
-                  2022
-                </div>
-              </div>
+              {renderQualificationData(
+                "Digital Capital",
+                "Développeur back-end, spécialisé en Symfony",
+                "26 juil. - 26 août 2022"
+              )}
               <div>
                 <span className="qualification__rounder"></span>
                 <span className="qualification__line"></span>
@@ -100,28 +116,14 @@ const Qualification = () => {
                 <span className="qualification__rounder"></span>
                 <span className="qualification__line"></span>
               </div>
-              <div>
-                <h3 className="qualification__title">Dabador</h3>
-                <span className="qualification__subtitle"></span>
-                <div className="qualification__calendar">
-                  <i className="uil uil-calendar-alt"></i>
-                </div>
-              </div>
+              {renderQualificationData("Dabador", "", "")}
             </div>
             <div className="qualification__data">
-              <div>
-                <h3 className="qualification__title">Integral Tech</h3>
-                <span className="qualification__subtitle">
-                  Développement d'une nouvelle solution ERP avec React,
-                  TypeScript, Redux et Tailwind. Traduction de l'ERP en
-                  français, anglais et arabe. Élaboration de la documentation
-                  API avec Laravel. Révision des fautes d'orthographe dans
-                  l'ancien ERP.
-                </span>
-                <div className="qualification__calendar">
-                  <i className="uil uil-calendar-alt"></i> 3 août 2023 - Présent
-                </div>
-              </div>
+              {renderQualificationData(
+                "Integral Tech",
+                "Développement d'une nouvelle solution ERP avec React, TypeScript, Redux et Tailwind. Traduction de l'ERP en français, anglais et arabe. Élaboration de la documentation API avec Laravel. Révision des fautes d'orthographe dans l'ancien ERP.",
+                "3 août 2023 - Présent"
+              )}
               <div>
                 <span className="qualification__rounder"></span>
               </div>
@@ -134,3 +136,4 @@ const Qualification = () => {
 };
 
 export default Qualification;
+
