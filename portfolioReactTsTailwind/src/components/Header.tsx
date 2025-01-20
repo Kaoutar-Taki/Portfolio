@@ -6,7 +6,6 @@ const Header = () => {
   const navMenuRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Initialiser le thème à partir du localStorage
     const savedTheme = localStorage.getItem("selected-theme") as
       | "dark"
       | "light";
@@ -14,8 +13,6 @@ const Header = () => {
       setTheme(savedTheme);
       document.body.classList.toggle("dark-theme", savedTheme === "dark");
     }
-
-    // Gestionnaire d'événements pour le scroll
     const handleScroll = () => {
       if (headerRef.current) {
         headerRef.current.classList.toggle(
@@ -55,94 +52,95 @@ const Header = () => {
   };
 
   return (
-    <header className="header" id="header" ref={headerRef}>
-      {/* header */}
+    <header
+      className="w-full fixed bottom-0 left-0 z-20 bg-[hsl(23,60%,99%)] dark:bg-[hsl(23,28%,12%)] md:bottom-auto md:px-4 lg:px-0"
+      id="header"
+      ref={headerRef}
+    >
       <nav className="nav max-w-3xl mx-6 sm:mx-4 md:mx-auto">
         {/* nav */}
         <a href="#" className="nav__logo">
           Ktaki
         </a>
         {/* nav__logo */}
-        <div className="nav__menu" id="nav-menu" ref={navMenuRef}>
+
+        <div
+          // className="nav__menu"
+          className="fixed md:relative -bottom-full md:bottom-auto left-0 md:left-auto w-full bg-[hsl(23,60%,99%)] dark:bg-[hsl(23,28%,12%)] p-8 sm:p-[2rem_1rem_4rem] md:p-0 shadow-[0_-1px_4px_rgba(0,0,0,0.15)] md:shadow-none rounded-t-[1.5rem] transition-all duration-300"
+          id="nav-menu"
+          ref={navMenuRef}
+        >
           {/* nav__menu  */}
-          <ul className="nav__list grid gap-6">
-            {/* nav__list */}
-            <li className="nav__item">
-              {/* nav__item  */}
+          <ul className="grid-cols-3 sm:gap-x-0 md:flex md:gap-x-8 grid gap-6">
+            <li>
               <a
                 href="#home"
-                className="nav__link active-link"
+                className="flex flex-col items-center text-xs md:text-sm text-[hsl(23,8%,15%)] dark:text-[hsl(23,8%,95%)] font-medium hover:text-[hsl(23,69%,61%)] text-[hsl(23, 69%, 61%)]"
                 onClick={handleLinkClick}
               >
-                <i className="uil uil-estate nav__icon"></i>
-                {/* nav__icon */}
+                <i className="uil uil-estate text-[1.2rem] md:hidden"></i>
                 Home
               </a>
-              {/* nav__link , active-link */}
             </li>
-            <li className="nav__item">
-              {/* nav__item */}
-              <a href="#about" className="nav__link" onClick={handleLinkClick}>
-                <i className="uil uil-user nav__icon"></i>
-                {/* nav__icon */}
+            <li>
+              <a
+                href="#about"
+                className="flex flex-col items-center text-xs md:text-sm text-[hsl(23,8%,15%)] dark:text-[hsl(23,8%,95%)] font-medium hover:text-[hsl(23,69%,61%)]"
+                onClick={handleLinkClick}
+              >
+                <i className="uil uil-user text-[1.2rem] md:hidden"></i>
                 About
               </a>
-              {/* nav__link */}
             </li>
-            <li className="nav__item">
-              {/* nav__item  */}
-              <a href="#skills" className="nav__link" onClick={handleLinkClick}>
-                <i className="uil uil-file-alt nav__icon"></i>
-                {/* nav__icon */}
+            <li>
+              <a
+                href="#skills"
+                className="flex flex-col items-center text-xs md:text-sm text-[hsl(23,8%,15%)] dark:text-[hsl(23,8%,95%)] font-medium hover:text-[hsl(23,69%,61%)]"
+                onClick={handleLinkClick}
+              >
+                <i className="uil uil-file-alt text-[1.2rem] md:hidden"></i>
                 Skills
               </a>
-              {/* nav__link  */}
             </li>
-            <li className="nav__item">
-              {/* nav__item  */}
+            <li>
               <a
                 href="#qualification"
-                className="nav__link"
+                className="flex flex-col items-center text-xs md:text-sm text-[hsl(23,8%,15%)] dark:text-[hsl(23,8%,95%)] font-medium hover:text-[hsl(23,69%,61%)]"
                 onClick={handleLinkClick}
               >
-                <i className="uil uil-briefcase-alt nav__icon"></i>
-                {/* nav__icon */}
+                <i className="uil uil-briefcase-alt text-[1.2rem] md:hidden"></i>
                 Qualification
               </a>
-              {/* nav__link   */}
             </li>
-            <li className="nav__item">
-              {/* nav__item */}
+            <li>
               <a
                 href="#contact"
-                className="nav__link"
+                className="flex flex-col items-center text-xs md:text-sm text-[hsl(23,8%,15%)] dark:text-[hsl(23,8%,95%)] font-medium hover:text-[hsl(23,69%,61%)]"
                 onClick={handleLinkClick}
               >
-                <i className="uil uil-message nav__icon"></i>
-                {/* nav__icon */}
+                <i className="uil uil-message text-[1.2rem] md:hidden"></i>
                 Contact Me
               </a>
-              {/* nav__link   */}
             </li>
           </ul>
           <button
-            className="nav__close"
+            className="absolute right-5 bottom-2 text-2xl cursor-pointer text-[hsl(23,69%,61%)] hover:text-[hsl(23,57%,53%)] md:hidden"
             aria-label="Close menu"
             onClick={closeMenu}
           >
             <i className="uil uil-times"></i>
           </button>
-          {/* nav__close */}
         </div>
 
-        <div className="nav__btns">
-          {/* nav__btns */}
-          <button className="nav__toggle" onClick={openMenu}>
-            {/* nav__toggle  */}
+        <div className="flex items-center">
+          <button
+            className="text-[hsl(23,8%,15%)] dark:text-[hsl(23,8%,95%)] font-medium text-lg cursor-pointer hover:text-[hsl(23,69%,61%)] md:hidden"
+            onClick={openMenu}
+          >
             <i className="uil uil-apps"></i>
           </button>
           <button
-            className="change-theme"
+            className="text-xl text-[hsl(23,8%,15%)] dark:text-[hsl(23,8%,95%)] mr-4 cursor-pointer hover:text-[hsl(23,69%,61%)] md:m-0"
             aria-label="Toggle theme"
             onClick={toggleTheme}
           >
@@ -150,7 +148,6 @@ const Header = () => {
               className={`uil ${theme === "dark" ? "uil-sun" : "uil-moon"}`}
             ></i>
           </button>
-          {/* change-theme */}
         </div>
       </nav>
     </header>

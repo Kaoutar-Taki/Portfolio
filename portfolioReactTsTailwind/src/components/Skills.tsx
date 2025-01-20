@@ -9,12 +9,12 @@ const Skills = () => {
 
   return (
     <>
-      <section className="skills section" id="skills">
-        {/* skills,section */}
-        <h2 className="section__title">Skills</h2>
-        {/* section__title  */}
-        <span className="section__subtitle">My technical level</span>
-        {/* section__subtitle  */}
+      <section className="skills p-8 md:p-24 md:pt-24 md:pb-8" id="skills">
+        {/* skills */}
+        <h2 className="text-2xl md:text-4xl text-center">Skills</h2>
+        <span className="block text-sm md:text-base mb-12 text-center md:mb-16">
+          My technical level
+        </span>
         <div className="skills__container max-w-3xl mx-6 sm:mx-4 md:mx-auto grid gap-6">
           {/* skills__container  */}
           {/* SKILLS 1 */}

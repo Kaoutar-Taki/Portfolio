@@ -2,8 +2,8 @@ import profile from "../assets/img/profile.png";
 const Home = () => {
   return (
     <>
-      <section className="home section" id="home">
-        {/* home, section */}
+      <section className="home p-8 md:p-24 md:pt-24 md:pb-8" id="home">
+        {/* home */}
         <div className="home__container max-w-3xl mx-6 sm:mx-4 md:mx-auto grid gap-6">
           {/* home__container */}
           <div className="home__content grid gap-6">
@@ -73,17 +73,22 @@ const Home = () => {
                 développement front-end et back-end. Passionnée par la création
                 de solutions innovantes et efficaces.
               </p>
-              <a href="contact" className="button button--flex">
-                Contact Me <i className="uil uil-message button__icon"></i>
-                {/* button__icon  */}
+              <a
+                href="contact"
+                className="inline-block bg-[hsl(23,69%,61%)] text-white p-4 rounded-lg font-medium hover:bg-[hsl(23,57%,53%)] items-center"
+              >
+                Contact Me
+                <i className="uil uil-message text-xl ml-2 transition duration-300"></i>
               </a>
-              {/* button, button--flex  */}
             </div>
           </div>
           <div className="home__scroll">
             {/* home__scroll  */}
-            <a href="#about" className="home__scroll-button button--flex">
-              {/* home__scroll-button, button--flex  */}
+            <a
+              href="#about"
+              className="home__scroll-button inline-flex items-center"
+            >
+              {/* home__scroll-button  */}
               <i className="uil uil-mouse-alt home__scroll-mouse"></i>
               {/* home__scroll-mouse  */}
               <span className="home__scroll-name">Scroll Down</span>

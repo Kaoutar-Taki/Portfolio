@@ -8,12 +8,15 @@ const Qualification = () => {
   };
 
   return (
-    <section className="qualification section" id="qualification">
-      {/* qualification ,section */}
-      <h2 className="section__title">Qualification</h2>
-      {/* section__title  */}
-      <span className="section__subtitle">My personal journey</span>
-      {/* section__subtitle  */}
+    <section
+      className="qualification p-8 md:p-24 md:pt-24 md:pb-8"
+      id="qualification"
+    >
+      {/* qualification  */}
+      <h2 className="text-2xl md:text-4xl text-center">Qualification</h2>
+      <span className="block text-sm md:text-base mb-12 text-center md:mb-16">
+        My personal journey
+      </span>
       <div className="qualification__container max-w-3xl mx-6 sm:mx-4 md:mx-auto">
         {/* qualification__container */}
         <div
@@ -23,7 +26,7 @@ const Qualification = () => {
         >
           {/* qualification__tabs  */}
           <div
-            className={`qualification__button button--flex ${
+            className={`qualification__button inline-flex items-center ${
               activeTab === "education" ? "qualification__active" : ""
             }`}
             role="tab"
@@ -35,9 +38,9 @@ const Qualification = () => {
             {/* qualification__icon */}
             Education
           </div>
-          {/* qualification__button , button--flex , education , qualification__active */}
+          {/* qualification__button ,  education , qualification__active */}
           <div
-            className={`qualification__button button--flex ${
+            className={`qualification__button inline-flex items-center ${
               activeTab === "work" ? "qualification__active" : ""
             }`}
             role="tab"
@@ -49,7 +52,7 @@ const Qualification = () => {
             {/* qualification__icon */}
             Work
           </div>
-          {/* qualification__button , button--flex , work , qualification__active */}
+          {/* qualification__button ,  work , qualification__active */}
         </div>
 
         <div className="qualification__sections">
